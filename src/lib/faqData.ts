@@ -16,7 +16,7 @@ export const faqCategories: FaqCategory[] = [
     items: [
       {
         q: "What is Zoo Printables AI?",
-        a: "Zoo Printables AI is a free educational platform that provides AI-crafted wildlife printables for children ages 3–12. Each month we release a new animal-themed pack containing coloring pages, worksheets, fact sheets, habitat maps, STEM activities, and writing prompts — all completely free to download and print at home or in the classroom.",
+        a: "Zoo Printables AI is a free educational platform that provides AI-crafted wildlife printables for children ages 3–12. Each month we release a new animal-themed pack containing animal fact sheets, coloring pages, and activity packs — all completely free to download and print at home or in the classroom.",
       },
       {
         q: "Who created Zoo Printables AI?",
@@ -28,7 +28,7 @@ export const faqCategories: FaqCategory[] = [
       },
       {
         q: "How does AI help create the printables?",
-        a: "Zoo Printables AI uses artificial intelligence to research, design, and generate age-appropriate educational content for each animal pack. The AI draws on up-to-date zoological data, conservation status information, and curriculum standards to produce accurate fact sheets, creative activity pages, and STEM challenges — which are then reviewed by Dr. Maya Okafor for scientific accuracy before publishing.",
+        a: "Zoo Printables AI uses artificial intelligence to research, design, and generate age-appropriate educational content for each animal pack. The AI draws on up-to-date zoological data and conservation status information to produce accurate fact sheets, coloring pages, and activity packs — which are then reviewed by Dr. Maya Okafor for scientific accuracy before publishing.",
       },
       {
         q: "How many animal packs are available?",
@@ -42,7 +42,7 @@ export const faqCategories: FaqCategory[] = [
     items: [
       {
         q: "How do I download a free printable pack?",
-        a: "Simply visit the Free Packs section on zooprintablesai.com, choose an animal and age group, and click the download button. Your PDF will begin downloading immediately — no sign-up, no email required. Open the PDF in any viewer and print it on standard 8.5×11 or A4 paper.",
+        a: "Simply visit the Free Packs section on zooprintablesai.com, browse animals A–Z, and click the download button next to any animal. Your PDF will begin downloading immediately — no sign-up, no email required. Open the PDF in any viewer and print it on standard 8.5×11 or A4 paper.",
       },
       {
         q: "What file format are the printables in?",
@@ -68,11 +68,11 @@ export const faqCategories: FaqCategory[] = [
     items: [
       {
         q: "What age groups are the printables designed for?",
-        a: "Zoo Printables AI offers three age-matched packs for each animal: the Cub Pack for ages 3–5, the Explorer Pack for ages 6–9, and the Conservationist Pack for ages 10–12. Each tier is calibrated to the reading level, fine motor skills, and cognitive development of the target age group.",
+        a: "Zoo Printables AI printables are designed for children ages 3–12. Each pack is calibrated to be accessible across that range — coloring pages scale in complexity from simple line art for younger children to more detailed scenes for older kids, and fact sheets are written at a clear, engaging reading level.",
       },
       {
         q: "What is included in each animal pack?",
-        a: "Every Zoo Printables AI pack includes six types of activities: (1) Animal fact sheets with scientifically accurate information, (2) Coloring pages at appropriate detail levels, (3) Activity worksheets such as word searches, crosswords, and matching games, (4) Habitat maps and ecosystem posters, (5) STEM mini-projects inspired by animal adaptations, and (6) Creative writing prompts and story starters.",
+        a: "Every Zoo Printables AI pack includes three types of activities: (1) Animal fact sheets with scientifically accurate information on habitat, diet, behavior, and conservation status, (2) Coloring pages with line art calibrated to skill level, and (3) Activity packs with word searches, crosswords, matching games, and fill-in-the-blank exercises.",
       },
       {
         q: "Are the animal facts scientifically accurate?",
@@ -80,7 +80,7 @@ export const faqCategories: FaqCategory[] = [
       },
       {
         q: "Are there printables for preschoolers?",
-        a: "Yes. The Cub Pack (ages 3–5) is specifically designed for preschool and kindergarten children. It features large-print coloring pages with simple line art, trace-and-match activities, basic animal fact cards with illustrations, dot-to-dot drawings, and sticker-sheet printables — all appropriate for early childhood fine motor development.",
+        a: "Yes. Every animal pack includes coloring pages with simple, large-format line art suitable for preschool and kindergarten children. Fact sheets use basic vocabulary and clear illustrations, and activity packs include trace-and-match and dot-to-dot exercises appropriate for early childhood fine motor development.",
       },
       {
         q: "Do you have printables about endangered animals?",
@@ -88,7 +88,7 @@ export const faqCategories: FaqCategory[] = [
       },
       {
         q: "Can I use Zoo Printables AI for homeschool curriculum?",
-        a: "Absolutely. Many homeschool families use Zoo Printables AI as a core component of their science and nature study curriculum. The packs align with common homeschool frameworks covering biology, ecology, geography, reading comprehension, and STEM. The three age tiers make it easy to use across multiple grade levels simultaneously.",
+        a: "Absolutely. Many homeschool families use Zoo Printables AI as a core component of their science and nature study curriculum. The fact sheets, coloring pages, and activity packs cover biology, ecology, and reading comprehension in a format that works across multiple grade levels simultaneously.",
       },
     ],
   },
@@ -98,7 +98,7 @@ export const faqCategories: FaqCategory[] = [
     items: [
       {
         q: "Are Zoo Printables AI worksheets aligned to educational standards?",
-        a: "Zoo Printables AI activities are designed to support Next Generation Science Standards (NGSS) life science strands, Common Core ELA standards for informational text and writing, and the STEM/STEAM frameworks used in K–8 classrooms across the United States. Specific standard alignments are listed in the teacher guide included with each Explorer and Conservationist Pack.",
+        a: "Zoo Printables AI activities are designed to support Next Generation Science Standards (NGSS) life science strands and Common Core ELA standards for informational text. The fact sheets, coloring pages, and activity packs map to K–8 science and literacy objectives used in classrooms across the United States.",
       },
       {
         q: "Is there a limit to how many copies I can print for my class?",
@@ -106,7 +106,7 @@ export const faqCategories: FaqCategory[] = [
       },
       {
         q: "Do you offer teacher guides with the packs?",
-        a: "Yes. The Explorer Pack (ages 6–9) and Conservationist Pack (ages 10–12) each include a teacher guide PDF with lesson objectives, discussion questions, vocabulary lists, extension activities, and suggested standard alignments. Teacher guides are included in the same free download as the student pages.",
+        a: "Yes. Each animal pack includes a teacher guide PDF with lesson objectives, discussion questions, and vocabulary lists. The guide is included in the same free download as the student pages.",
       },
       {
         q: "Can I share Zoo Printables AI packs with other teachers?",
@@ -134,11 +134,11 @@ export const faqCategories: FaqCategory[] = [
     items: [
       {
         q: "How often are new animal packs released?",
-        a: "Zoo Printables AI releases one brand-new animal pack every month. The animal theme for the upcoming month is announced on the website with a live countdown timer. Past packs remain in the free archive indefinitely.",
+        a: "Zoo Printables AI releases one brand-new animal pack every month. The featured animal is announced on the homepage. Past packs remain in the free archive indefinitely.",
       },
       {
         q: "How do I find out when the next pack drops?",
-        a: "The Zoo Printables AI homepage shows a live countdown timer to the next monthly pack release. You can also follow @zooprintablesai on Instagram, Pinterest, Facebook, and TikTok, where new pack announcements are posted the day of release.",
+        a: "The Zoo Printables AI homepage shows the featured animal for the current month. You can also follow @zooprintablesai on Instagram, Pinterest, Facebook, and TikTok, where new pack announcements are posted the day of release.",
       },
       {
         q: "Can I request a specific animal for a future pack?",

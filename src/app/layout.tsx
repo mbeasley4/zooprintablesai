@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const SITE_URL = "https://www.zooprintablesai.com";
 const SITE_NAME = "Zoo Printables AI";
 const SITE_DESCRIPTION =
-  "AI-powered zoo & wildlife printables for kids ages 3–12. Download educational worksheets, coloring pages, activity packs, and animal fact sheets — new animal theme every month.";
+  "AI-powered zoo & wildlife printables for kids ages 3–12. Download free animal fact sheets, coloring pages, and activity packs — new animal theme every month.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

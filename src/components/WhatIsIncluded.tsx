@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const items = [
   {
     emoji: "📚",
@@ -15,38 +17,17 @@ const items = [
   },
   {
     emoji: "✏️",
-    title: "Activity Worksheets",
+    title: "Activity Packs",
     desc: "Word searches, crosswords, matching games, fill-in-the-blank, and handwriting practice built into every pack.",
     accent: "#60A5FA",
     bg: "bg-sky-50",
   },
-  {
-    emoji: "🗺️",
-    title: "Habitat Maps & Posters",
-    desc: "Wall-ready world maps marking where each animal lives, with biome breakdowns kids can annotate.",
-    accent: "#A78BFA",
-    bg: "bg-violet-50",
-  },
-  {
-    emoji: "🧪",
-    title: "STEM Mini-Projects",
-    desc: "Science experiments and engineering challenges inspired by real animal adaptations — no special supplies needed.",
-    accent: "#FBBF24",
-    bg: "bg-yellow-50",
-  },
-  {
-    emoji: "📖",
-    title: "Writing Prompts",
-    desc: "Story starters and research frames that drop kids into the animal's world and onto the blank page fast.",
-    accent: "#F87171",
-    bg: "bg-rose-50",
-  },
 ];
 
 const steps = [
-  { n: "01", title: "Pick Your Pack", desc: "Choose an animal and age group from the free library." },
-  { n: "02", title: "Instant Download", desc: "Your print-ready PDF downloads immediately — no account needed." },
-  { n: "03", title: "Print & Learn", desc: "Print at home or school and dive into hours of wildlife fun." },
+  { n: "01", icon: "🦁", title: "Pick Your Pack", desc: "Browse animals A–Z and choose one from the free library." },
+  { n: "02", icon: "⬇️", title: "Instant Download", desc: "Your print-ready PDF downloads immediately — no account needed." },
+  { n: "03", icon: "🖨️", title: "Print & Learn", desc: "Print at home or school and dive into hours of wildlife fun." },
 ];
 
 export default function WhatIsIncluded() {
@@ -58,7 +39,7 @@ export default function WhatIsIncluded() {
         <div className="text-center mb-16">
           <p className="section-label justify-center">What&apos;s in Every Pack</p>
           <h2 className="text-4xl sm:text-5xl font-black text-gray-900 mb-4">
-            Six Activities.{" "}
+            Three Activities.{" "}
             <span className="text-[#2D6A4F]">One Amazing Animal.</span>
           </h2>
           <p className="text-gray-500 text-lg max-w-xl mx-auto">
@@ -67,7 +48,7 @@ export default function WhatIsIncluded() {
         </div>
 
         {/* Activity cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
           {items.map((item) => (
             <div
               key={item.title}
@@ -86,37 +67,82 @@ export default function WhatIsIncluded() {
           ))}
         </div>
 
+        {/* Photo break */}
+        <div className="relative h-64 sm:h-80 rounded-3xl overflow-hidden mb-14 shadow-xl">
+          <Image
+            src="/images/site/giraffe.png"
+            alt="Child feeding a giraffe at the zoo"
+            fill
+            className="object-cover object-center"
+            sizes="(max-width: 768px) 100vw, 1152px"
+          />
+          <div className="absolute inset-0 bg-linear-to-r from-black/65 via-black/30 to-transparent" />
+          <div className="absolute inset-0 flex flex-col justify-end p-8 sm:p-10">
+            <p className="text-[#52B788] text-xs font-bold uppercase tracking-widest mb-2">Why It Matters</p>
+            <h3 className="text-white font-black text-2xl sm:text-3xl max-w-sm leading-snug">
+              Every kid deserves to know the wild.
+            </h3>
+          </div>
+        </div>
+
         {/* How it works */}
-        <div className="bg-[#1B4332] rounded-3xl px-8 py-12 relative overflow-hidden">
-          {/* Subtle leaf bg */}
-          <div className="absolute inset-0 opacity-[0.04] pointer-events-none">
-            <svg width="100%" height="100%" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice">
-              <path d="M-40 100 Q80 0 200 80 Q320 160 440 60" stroke="white" strokeWidth="60" fill="none"/>
-              <path d="M-40 160 Q80 60 200 140 Q320 220 440 120" stroke="white" strokeWidth="40" fill="none"/>
-            </svg>
+        <div
+          className="rounded-3xl px-8 py-14 relative overflow-hidden shadow-2xl"
+          style={{ background: "linear-gradient(135deg, #0d2a12 0%, #1B4332 50%, #0d2a12 100%)" }}
+        >
+          {/* Radial glow behind the steps */}
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] rounded-full opacity-20"
+              style={{ background: "radial-gradient(ellipse, #52B788 0%, transparent 70%)" }} />
           </div>
 
-          <p className="section-label justify-center text-[#52B788] mb-2" style={{ color: "#52B788" }}>
-            Three Steps
-          </p>
-          <h3 className="text-center text-white font-black text-3xl mb-12">
-            How It Works
-          </h3>
+          {/* Decorative corner leaves */}
+          <div className="absolute top-0 left-0 w-48 h-48 opacity-10 pointer-events-none">
+            <svg viewBox="0 0 200 200" fill="none"><path d="M-20 100 Q60 0 200 40 Q120 120 -20 180Z" fill="#52b788"/></svg>
+          </div>
+          <div className="absolute bottom-0 right-0 w-48 h-48 opacity-10 pointer-events-none">
+            <svg viewBox="0 0 200 200" fill="none"><path d="M220 100 Q140 200 0 160 Q80 80 220 20Z" fill="#52b788"/></svg>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
-            {/* Connecting line on desktop */}
-            <div className="hidden md:block absolute top-10 left-[calc(16.66%+1rem)] right-[calc(16.66%+1rem)] h-px border-t-2 border-dashed border-white/20 pointer-events-none" />
+          {/* Header */}
+          <div className="text-center mb-12 relative z-10">
+            <span className="inline-flex items-center gap-2 bg-[#52B788]/20 border border-[#52B788]/40 text-[#52B788] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-4">
+              Three Steps
+            </span>
+            <h3 className="text-white font-black text-4xl sm:text-5xl">
+              How It Works
+            </h3>
+          </div>
 
-            {steps.map(({ n, title, desc }) => (
-              <div key={n} className="flex flex-col items-center text-center relative z-10">
-                <div className="w-20 h-20 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center mb-4 shadow-lg">
-                  <span className="text-[#F4A261] text-2xl font-black tracking-widest">{n}</span>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 relative z-10">
+            {steps.map(({ n, icon, title, desc }) => (
+              <div key={n} className="relative flex flex-col items-center text-center group">
+
+                {/* Step card */}
+                <div className="w-full bg-white/8 hover:bg-white/12 transition-colors border border-white/15 rounded-2xl p-7 flex flex-col items-center">
+                  {/* Number badge */}
+                  <div className="relative mb-5">
+                    <div className="w-20 h-20 rounded-full flex items-center justify-center shadow-lg"
+                      style={{ background: "linear-gradient(135deg, #F4A261, #E76F51)" }}>
+                      <span className="text-white text-3xl font-black">{n}</span>
+                    </div>
+                    {/* Glow ring */}
+                    <div className="absolute inset-0 rounded-full opacity-40 blur-md"
+                      style={{ background: "linear-gradient(135deg, #F4A261, #E76F51)" }} />
+                  </div>
+
+                  <div className="text-3xl mb-3">{icon}</div>
+                  <h4 className="text-white font-black text-xl mb-2">{title}</h4>
+                  <p className="text-white/60 text-sm leading-relaxed">{desc}</p>
                 </div>
-                <h4 className="text-white font-bold text-lg mb-2">{title}</h4>
-                <p className="text-white/60 text-sm leading-relaxed max-w-xs">{desc}</p>
               </div>
             ))}
           </div>
+
+          {/* Bottom trust line */}
+          <p className="text-center text-white/30 text-xs mt-10 tracking-widest uppercase relative z-10">
+            No account &nbsp;·&nbsp; No credit card &nbsp;·&nbsp; Always free
+          </p>
         </div>
 
       </div>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import WhatIsIncluded from "@/components/WhatIsIncluded";
@@ -75,7 +76,7 @@ const jsonLd = {
       url: SITE,
       name: "Zoo Printables AI — Free Wildlife Printables for Kids",
       description:
-        "Download free AI-crafted zoo and wildlife printables for children ages 3–12. Includes coloring pages, worksheets, fact sheets, STEM activities, and habitat maps for 120+ animals.",
+        "Download free AI-crafted zoo and wildlife printables for children ages 3–12. Includes animal fact sheets, coloring pages, and activity packs for 120+ animals.",
       isPartOf: { "@id": `${SITE}/#website` },
       about: { "@id": `${SITE}/#organization` },
       speakable: {
@@ -90,15 +91,15 @@ const jsonLd = {
       },
     },
 
-    /* ── Free Product (Cub Pack) ── */
+    /* ── Free Product (Animal Pack Library) ── */
     {
       "@type": "Product",
-      "@id": `${SITE}/#cub-pack`,
-      name: "Cub Pack — Free Zoo Printables for Ages 3–5",
+      "@id": `${SITE}/#animal-pack-library`,
+      name: "Zoo Printables AI — Free Wildlife Printable Packs A–Z",
       description:
-        "Free downloadable wildlife printables for preschool children ages 3–5. Includes large-print coloring pages, trace-and-match activities, simple animal fact cards, dot-to-dot drawings, and sticker-sheet printables.",
+        "Free downloadable wildlife printable packs for kids, organized alphabetically. Browse 50+ animals including Gorilla, Cheetah, Polar Bear, and more. Each pack includes animal fact sheets, coloring pages, and activity packs.",
       brand: { "@id": `${SITE}/#organization` },
-      audience: { "@type": "EducationalAudience", educationalRole: "student", audienceType: "Children ages 3–5" },
+      audience: { "@type": "EducationalAudience", educationalRole: "student", audienceType: "Children ages 3–12" },
       offers: {
         "@type": "Offer",
         price: "0",
@@ -107,47 +108,7 @@ const jsonLd = {
         url: `${SITE}/#packs`,
         priceValidUntil: "2099-12-31",
       },
-      aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", bestRating: "5", reviewCount: "847" },
-    },
-
-    /* ── Free Product (Explorer Pack) ── */
-    {
-      "@type": "Product",
-      "@id": `${SITE}/#explorer-pack`,
-      name: "Explorer Pack — Free Zoo Printables for Ages 6–9",
-      description:
-        "Free downloadable wildlife printables for children ages 6–9. Includes animal fact sheets, word searches, habitat maps, STEM mini-projects, reading comprehension sheets, and a monthly animal poster.",
-      brand: { "@id": `${SITE}/#organization` },
-      audience: { "@type": "EducationalAudience", educationalRole: "student", audienceType: "Children ages 6–9" },
-      offers: {
-        "@type": "Offer",
-        price: "0",
-        priceCurrency: "USD",
-        availability: "https://schema.org/InStock",
-        url: `${SITE}/#packs`,
-        priceValidUntil: "2099-12-31",
-      },
-      aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", bestRating: "5", reviewCount: "1203" },
-    },
-
-    /* ── Free Product (Conservationist Pack) ── */
-    {
-      "@type": "Product",
-      "@id": `${SITE}/#conservationist-pack`,
-      name: "Conservationist Pack — Free Zoo Printables for Ages 10–12",
-      description:
-        "Free downloadable wildlife printables for children ages 10–12. Includes research report templates, food web diagrams, conservation challenge projects, animal taxonomy worksheets, and science journal printables.",
-      brand: { "@id": `${SITE}/#organization` },
-      audience: { "@type": "EducationalAudience", educationalRole: "student", audienceType: "Children ages 10–12" },
-      offers: {
-        "@type": "Offer",
-        price: "0",
-        priceCurrency: "USD",
-        availability: "https://schema.org/InStock",
-        url: `${SITE}/#packs`,
-        priceValidUntil: "2099-12-31",
-      },
-      aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", bestRating: "5", reviewCount: "512" },
+      aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", bestRating: "5", reviewCount: "2562" },
     },
 
     /* ── HowTo: How to download a free printable pack ── */
@@ -162,7 +123,7 @@ const jsonLd = {
           "@type": "HowToStep",
           position: 1,
           name: "Choose your pack",
-          text: "Visit zooprintablesai.com and select an animal and age group (Cub Pack for ages 3–5, Explorer Pack for ages 6–9, or Conservationist Pack for ages 10–12).",
+          text: "Visit zooprintablesai.com and browse animals A–Z. Pick any animal from the free library.",
           url: `${SITE}/#packs`,
         },
         {
@@ -225,12 +186,37 @@ export default function Home() {
         {/* speakable-summary is targeted by the Speakable schema cssSelector */}
         <p className="speakable-summary sr-only">
           Zoo Printables AI offers free AI-crafted wildlife printables for kids ages 3 to 12,
-          including coloring pages, worksheets, animal fact sheets, STEM activities, and habitat maps.
+          including animal fact sheets, coloring pages, and activity packs.
           New animal packs are released every month. No sign-up or payment required.
         </p>
         <WhatIsIncluded />
         <AgeTiers />
         <ImpactStats />
+
+        {/* Elephant photo banner */}
+        <section className="relative h-100 sm:h-120 overflow-hidden">
+          <Image
+            src="/images/site/elephant.png"
+            alt="Elephant family silhouette at sunset on the African savanna"
+            fill
+            className="object-cover object-center"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+            <p className="text-[#F4A261] font-bold text-xs uppercase tracking-widest mb-3">Wildlife Education</p>
+            <h2 className="text-white font-black text-4xl sm:text-5xl mb-6 leading-tight">
+              Free for Every Family.<br />Always.
+            </h2>
+            <a
+              href="#packs"
+              className="bg-[#F4A261] hover:bg-[#E76F51] text-white font-bold px-8 py-3.5 rounded-full transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1"
+            >
+              Browse Animals A–Z
+            </a>
+          </div>
+        </section>
+
         <Testimonials />
         <PastPrintables />
       </main>

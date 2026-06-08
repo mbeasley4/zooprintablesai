@@ -273,7 +273,7 @@ export default function AboutPage() {
             <p>
               Three years later, after learning to work with AI-generation tools, Dr. Maya launched
               Zoo Printables AI — a growing library of beautifully designed, scientifically accurate
-              wildlife printables covering 120+ animals, organized by age group, and free to download
+              wildlife printables covering 120+ animals — fact sheets, coloring pages, and activity packs — free to download
               for every family and classroom on earth. No sign-up. No paywall. No catch.
             </p>
           </div>

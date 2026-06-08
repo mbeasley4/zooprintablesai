@@ -15,15 +15,11 @@ export default function Navbar() {
   const pathname = usePathname();
   const isHome = pathname === "/";
 
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(!isHome);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    // Non-home pages are always in "scrolled" (white) state
-    if (!isHome) {
-      setScrolled(true);
-      return;
-    }
+    if (!isHome) return;
     const handleScroll = () => setScrolled(window.scrollY > 20);
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });

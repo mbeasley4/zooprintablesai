@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const testimonials = [
   {
     name: "Sarah M.",
@@ -5,8 +7,8 @@ const testimonials = [
     initials: "SM",
     color: "#52B788",
     rating: 5,
-    text: "We've tried so many printable subscriptions and this one is on a completely different level. The elephant pack kept my 7-year-old engaged for an entire Saturday. The STEM activities are genuinely clever!",
-    pack: "Explorer Pack",
+    text: "We've tried so many printable subscriptions and this one is on a completely different level. The elephant pack kept my 7-year-old engaged for an entire Saturday. The activity pack is genuinely clever!",
+    pack: "Elephant Pack",
   },
   {
     name: "Mr. Davis",
@@ -15,7 +17,7 @@ const testimonials = [
     color: "#60A5FA",
     rating: 5,
     text: "I use Zoo Printables AI every week in my classroom. The fact sheets are accurate, the worksheets are scaffolded perfectly, and my students beg for the next animal.",
-    pack: "Explorer Pack",
+    pack: "Lion Pack",
   },
   {
     name: "Priya K.",
@@ -23,8 +25,8 @@ const testimonials = [
     initials: "PK",
     color: "#F4A261",
     rating: 5,
-    text: "Both my kids love it even though they're totally different ages. The Cub Pack is perfect for my 4-year-old and my 9-year-old is obsessed with the Conservationist challenge projects.",
-    pack: "Multiple Packs",
+    text: "Both my kids love it even though they're totally different ages. The coloring pages are perfect for my 4-year-old and my 9-year-old is obsessed with the activity packs.",
+    pack: "Multiple Animals",
   },
   {
     name: "Jake T.",
@@ -33,7 +35,7 @@ const testimonials = [
     color: "#A78BFA",
     rating: 5,
     text: "Kids are talking about conservation and using real scientific vocabulary after just a few sessions. Absolutely incredible free resource.",
-    pack: "Conservationist Pack",
+    pack: "Gorilla Pack",
   },
   {
     name: "Lisa R.",
@@ -42,7 +44,7 @@ const testimonials = [
     color: "#F472B6",
     rating: 5,
     text: "The coloring pages are stunning — way better quality than anything I found on Pinterest. My 5-year-old has filled an entire binder with her animal coloring book. She's so proud of it!",
-    pack: "Cub Pack",
+    pack: "Polar Bear Pack",
   },
   {
     name: "Dr. Nguyen",
@@ -51,7 +53,7 @@ const testimonials = [
     color: "#FBBF24",
     rating: 5,
     text: "We offer these printables at our library's reading program and the response has been incredible. Parents keep asking where we got them.",
-    pack: "Explorer Pack",
+    pack: "Lion Pack",
   },
 ];
 
@@ -66,16 +68,30 @@ export default function Testimonials() {
     <section id="reviews" className="py-24 px-4 bg-[#FEFAE0] bg-dots">
       <div className="max-w-6xl mx-auto">
 
-        {/* Header */}
-        <div className="text-center mb-12">
-          <p className="section-label justify-center">Reviews</p>
-          <h2 className="text-4xl sm:text-5xl font-black text-gray-900 mb-4">
-            Families & Teachers{" "}
-            <span className="text-[#2D6A4F]">Love It</span>
-          </h2>
-          <p className="text-gray-500 text-base max-w-md mx-auto">
-            From living rooms to classrooms — real people, real results.
-          </p>
+        {/* Photo + header split */}
+        <div className="flex flex-col lg:flex-row items-center gap-10 mb-12">
+          {/* Photo */}
+          <div className="relative w-full lg:w-80 h-64 lg:h-72 rounded-3xl overflow-hidden shadow-xl shrink-0">
+            <Image
+              src="/images/site/chimp.png"
+              alt="Young girl smiling alongside a baby chimpanzee"
+              fill
+              className="object-cover object-center"
+              sizes="(max-width: 1024px) 100vw, 320px"
+            />
+          </div>
+
+          {/* Header */}
+          <div className="text-center lg:text-left">
+            <p className="section-label lg:justify-start justify-center">Reviews</p>
+            <h2 className="text-4xl sm:text-5xl font-black text-gray-900 mb-4">
+              Families & Teachers{" "}
+              <span className="text-[#2D6A4F]">Love It</span>
+            </h2>
+            <p className="text-gray-500 text-base max-w-md">
+              From living rooms to classrooms — real people, real results.
+            </p>
+          </div>
         </div>
 
         {/* Platform ratings */}

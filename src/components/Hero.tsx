@@ -1,49 +1,8 @@
-"use client";
-import { useState, useEffect } from "react";
-
 const ANIMAL_OF_MONTH = {
-  name: "African Elephant",
-  emoji: "🐘",
-  releaseDate: new Date("2026-07-01T00:00:00"),
+  name: "Gorilla",
+  emoji: "🦍",
+  activities: 34,
 };
-
-type TimeLeft = { days: number; hours: number; minutes: number; seconds: number } | null;
-
-function useCountdown(target: Date): TimeLeft {
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>(null);
-  useEffect(() => {
-    const calc = () => {
-      const diff = target.getTime() - Date.now();
-      setTimeLeft(
-        diff <= 0
-          ? { days: 0, hours: 0, minutes: 0, seconds: 0 }
-          : {
-              days: Math.floor(diff / 86400000),
-              hours: Math.floor((diff % 86400000) / 3600000),
-              minutes: Math.floor((diff % 3600000) / 60000),
-              seconds: Math.floor((diff % 60000) / 1000),
-            }
-      );
-    };
-    calc();
-    const id = setInterval(calc, 1000);
-    return () => clearInterval(id);
-  }, [target]);
-  return timeLeft;
-}
-
-function CountdownUnit({ value, label }: { value: number; label: string }) {
-  return (
-    <div className="flex flex-col items-center">
-      <div className="bg-black/35 backdrop-blur-sm border border-white/20 rounded-xl w-14 h-14 flex items-center justify-center">
-        <span className="text-xl font-black text-white tabular-nums">
-          {String(value).padStart(2, "0")}
-        </span>
-      </div>
-      <span className="text-xs text-white/60 mt-1 uppercase tracking-wider font-medium">{label}</span>
-    </div>
-  );
-}
 
 const r4 = (n: number) => Math.round(n * 10000) / 10000;
 
@@ -488,8 +447,6 @@ function JungleScene() {
 
 /* ─── Hero ────────────────────────────────────────────────── */
 export default function Hero() {
-  const timeLeft = useCountdown(ANIMAL_OF_MONTH.releaseDate);
-
   return (
     <section className="relative min-h-[78vh] overflow-hidden flex flex-col" style={{ background: "#051a0a" }}>
       <JungleScene />
@@ -516,7 +473,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-base sm:text-lg text-white/85 max-w-2xl mx-auto mb-3 leading-relaxed">
-            Fact sheets, coloring pages, activity packs, habitat maps, STEM projects —
+            Animal fact sheets, coloring pages, and activity packs —
             all the good stuff, for every kid, completely free.
           </p>
           <p className="text-xs text-white/50 max-w-xl mx-auto mb-7">
@@ -528,7 +485,7 @@ export default function Hero() {
               href="#packs"
               className="bg-[#F4A261] hover:bg-[#E76F51] text-white font-bold text-base px-8 py-3.5 rounded-full transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1"
             >
-              Download Free Packs
+              Browse Animals A–Z
             </a>
             <a
               href="#how-it-works"
@@ -539,33 +496,14 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Countdown — only rendered client-side to avoid SSR/hydration mismatch */}
-        <div className="bg-black/40 backdrop-blur-md border border-white/15 rounded-2xl px-8 py-6 max-w-xs w-full">
-          <p className="text-white/60 text-xs font-bold uppercase tracking-widest mb-3">
-            Next Free Pack Drops In
+        {/* Featured animal — no urgency, just delight */}
+        <div className="bg-black/40 backdrop-blur-md border border-white/15 rounded-2xl px-8 py-5 max-w-xs w-full">
+          <p className="text-white/50 text-xs font-bold uppercase tracking-widest mb-3">
+            Featured This Month
           </p>
-          <div className="text-3xl mb-2">{ANIMAL_OF_MONTH.emoji}</div>
-          <p className="text-white font-bold text-base mb-4">{ANIMAL_OF_MONTH.name} Pack</p>
-          <div className="flex justify-center gap-3">
-            {timeLeft ? (
-              <>
-                <CountdownUnit value={timeLeft.days}    label="Days"  />
-                <CountdownUnit value={timeLeft.hours}   label="Hours" />
-                <CountdownUnit value={timeLeft.minutes} label="Min"   />
-                <CountdownUnit value={timeLeft.seconds} label="Sec"   />
-              </>
-            ) : (
-              /* Skeleton shown during SSR and first paint */
-              <>
-                {["Days", "Hours", "Min", "Sec"].map((label) => (
-                  <div key={label} className="flex flex-col items-center">
-                    <div className="bg-black/35 backdrop-blur-sm border border-white/20 rounded-xl w-14 h-14" />
-                    <span className="text-xs text-white/60 mt-1 uppercase tracking-wider font-medium">{label}</span>
-                  </div>
-                ))}
-              </>
-            )}
-          </div>
+          <div className="text-4xl mb-2">{ANIMAL_OF_MONTH.emoji}</div>
+          <p className="text-white font-bold text-base mb-1">{ANIMAL_OF_MONTH.name} Pack</p>
+          <p className="text-white/50 text-xs">{ANIMAL_OF_MONTH.activities} activities · always free</p>
         </div>
       </div>
 

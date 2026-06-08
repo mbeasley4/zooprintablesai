@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const pastPacks = [
   { emoji: "🐆", animal: "Cheetah",           month: "May 2026", activities: 28, accent: "#F59E0B" },
   { emoji: "🐊", animal: "Crocodile",          month: "Apr 2026", activities: 31, accent: "#52B788" },
@@ -18,16 +20,28 @@ export default function PastPrintables() {
 
       <div className="max-w-6xl mx-auto relative z-10">
 
-        {/* Header */}
-        <div className="text-center mb-14">
-          <p className="section-label justify-center">Pack Library</p>
-          <h2 className="text-4xl sm:text-5xl font-black text-gray-900 mb-4">
-            Explore the{" "}
-            <span className="text-[#2D6A4F]">Animal Archive</span>
-          </h2>
-          <p className="text-gray-500 text-lg max-w-xl mx-auto">
-            Every past pack is free to download — over 120 animals and counting.
-          </p>
+        {/* Header with lion photo */}
+        <div className="relative rounded-3xl overflow-hidden mb-14 shadow-xl">
+          <div className="relative h-56 sm:h-64">
+            <Image
+              src="/images/site/lion.png"
+              alt="Lion standing in golden savanna grass"
+              fill
+              className="object-cover object-center"
+              sizes="(max-width: 768px) 100vw, 1152px"
+            />
+            <div className="absolute inset-0 bg-linear-to-r from-black/70 via-black/40 to-black/10" />
+          </div>
+          <div className="absolute inset-0 flex flex-col justify-center px-10">
+            <p className="section-label text-[#52B788] mb-2" style={{ color: "#52B788" }}>Pack Library</p>
+            <h2 className="text-4xl sm:text-5xl font-black text-white mb-2">
+              Explore the{" "}
+              <span className="text-[#F4A261]">Animal Archive</span>
+            </h2>
+            <p className="text-white/70 text-lg max-w-xl">
+              Every past pack is free to download — over 120 animals and counting.
+            </p>
+          </div>
         </div>
 
         {/* Pack grid */}
