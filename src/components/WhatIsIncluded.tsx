@@ -70,8 +70,8 @@ export default function WhatIsIncluded() {
         {/* Photo break */}
         <div className="relative h-64 sm:h-80 rounded-3xl overflow-hidden mb-14 shadow-xl">
           <Image
-            src="/images/site/giraffe.png"
-            alt="Child feeding a giraffe at the zoo"
+            src="/images/site/gorilla-1.png"
+            alt="Gorilla in the wild"
             fill
             className="object-cover object-center"
             sizes="(max-width: 768px) 100vw, 1152px"
