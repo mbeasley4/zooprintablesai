@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 const ANIMAL_OF_MONTH = {
+  slug: "gorilla",
   name: "Gorilla",
   emoji: "🦍",
   activities: 34,
@@ -84,7 +85,7 @@ export default function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
-              href="#packs"
+              href="/animals"
               className="bg-[#F4A261] hover:bg-[#E76F51] text-white font-bold text-base px-8 py-3.5 rounded-full transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1"
             >
               Browse Animals A–Z
@@ -98,15 +99,18 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Featured animal — no urgency, just delight */}
-        <div className="bg-black/40 backdrop-blur-md border border-white/15 rounded-2xl px-8 py-5 max-w-xs w-full mb-6">
+        {/* Featured animal — links to its own page */}
+        <a
+          href={`/animals/${ANIMAL_OF_MONTH.slug}`}
+          className="bg-black/40 hover:bg-black/55 backdrop-blur-md border border-white/15 hover:border-white/30 rounded-2xl px-8 py-5 max-w-xs w-full mb-6 transition-all group"
+        >
           <p className="text-white/50 text-xs font-bold uppercase tracking-widest mb-3">
             Featured This Month
           </p>
           <div className="text-4xl mb-2">{ANIMAL_OF_MONTH.emoji}</div>
-          <p className="text-white font-bold text-base mb-1">{ANIMAL_OF_MONTH.name} Pack</p>
+          <p className="text-white font-bold text-base mb-1 group-hover:text-[#F4A261] transition-colors">{ANIMAL_OF_MONTH.name} Pack</p>
           <p className="text-white/50 text-xs">{ANIMAL_OF_MONTH.activities} activities · always free</p>
-        </div>
+        </a>
 
         {/* Animal photo strip — visible on all screens, hidden on lg+ where side cards take over */}
         <div className="flex gap-2 lg:hidden">

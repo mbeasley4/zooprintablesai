@@ -1,14 +1,14 @@
 import Image from "next/image";
 
 const pastPacks = [
-  { emoji: "🐆", animal: "Cheetah",           month: "May 2026", activities: 28, accent: "#F59E0B" },
-  { emoji: "🐊", animal: "Crocodile",          month: "Apr 2026", activities: 31, accent: "#52B788" },
-  { emoji: "🦈", animal: "Great White Shark",  month: "Mar 2026", activities: 29, accent: "#60A5FA" },
-  { emoji: "🦋", animal: "Monarch Butterfly",  month: "Feb 2026", activities: 26, accent: "#F472B6" },
-  { emoji: "🐻‍❄️", animal: "Polar Bear",       month: "Jan 2026", activities: 33, accent: "#A78BFA" },
-  { emoji: "🦅", animal: "Bald Eagle",         month: "Dec 2025", activities: 27, accent: "#F87171" },
-  { emoji: "🐬", animal: "Bottlenose Dolphin", month: "Nov 2025", activities: 30, accent: "#2DD4BF" },
-  { emoji: "🦏", animal: "White Rhino",        month: "Oct 2025", activities: 32, accent: "#C084FC" },
+  { emoji: "🐆", animal: "Cheetah",           slug: "cheetah",           month: "May 2026", activities: 28, accent: "#F59E0B" },
+  { emoji: "🐊", animal: "Crocodile",          slug: "crocodile",         month: "Apr 2026", activities: 31, accent: "#52B788" },
+  { emoji: "🦈", animal: "Great White Shark",  slug: "great-white-shark", month: "Mar 2026", activities: 29, accent: "#60A5FA" },
+  { emoji: "🦋", animal: "Monarch Butterfly",  slug: "monarch-butterfly", month: "Feb 2026", activities: 26, accent: "#F472B6" },
+  { emoji: "🐻‍❄️", animal: "Polar Bear",       slug: "polar-bear",        month: "Jan 2026", activities: 33, accent: "#A78BFA" },
+  { emoji: "🦅", animal: "Bald Eagle",         slug: "bald-eagle",        month: "Dec 2025", activities: 27, accent: "#F87171" },
+  { emoji: "🐬", animal: "Bottlenose Dolphin", slug: "bottlenose-dolphin",month: "Nov 2025", activities: 30, accent: "#2DD4BF" },
+  { emoji: "🦏", animal: "White Rhino",        slug: "white-rhino",       month: "Oct 2025", activities: 32, accent: "#C084FC" },
 ];
 
 export default function PastPrintables() {
@@ -49,7 +49,7 @@ export default function PastPrintables() {
           {pastPacks.map((pack) => (
             <a
               key={pack.animal}
-              href="#packs"
+              href={`/animals/${pack.slug}`}
               className="card-hover bg-white rounded-2xl border border-gray-100 shadow-sm p-5 flex flex-col items-center text-center group relative overflow-hidden"
             >
               {/* Glow on hover */}
@@ -81,7 +81,7 @@ export default function PastPrintables() {
             120+ animals in the archive — all free, no sign-up required.
           </p>
           <a
-            href="/#packs"
+            href="/animals"
             className="inline-flex items-center gap-2 bg-[#2D6A4F] hover:bg-[#1B4332] text-white font-bold px-8 py-4 rounded-full transition-all shadow-md hover:shadow-lg"
           >
             Browse the Full Archive
