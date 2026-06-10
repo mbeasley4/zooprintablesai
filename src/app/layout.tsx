@@ -71,6 +71,9 @@ export const metadata: Metadata = {
     },
   },
   category: "education",
+  verification: {
+    google: "ee8b0d9224d9e0bd",
+  },
 };
 
 export default function RootLayout({

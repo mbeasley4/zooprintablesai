@@ -26,11 +26,11 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { label: "Instagram", href: "#" },
-  { label: "Pinterest", href: "#" },
-  { label: "Facebook", href: "#" },
-  { label: "TikTok", href: "#" },
-  { label: "YouTube", href: "#" },
+  { label: "Instagram", href: "https://www.instagram.com/zooprintablesai" },
+  { label: "Pinterest", href: "https://www.pinterest.com/zooprintablesai" },
+  { label: "Facebook", href: "https://www.facebook.com/zooprintablesai" },
+  { label: "TikTok", href: "https://www.tiktok.com/@zooprintablesai" },
+  { label: "YouTube", href: "https://www.youtube.com/@zooprintablesai" },
 ];
 
 export default function Footer() {

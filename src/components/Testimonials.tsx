@@ -57,11 +57,6 @@ const testimonials = [
   },
 ];
 
-const platforms = [
-  { name: "Google",      rating: "4.9", count: "847"   },
-  { name: "Facebook",    rating: "4.8", count: "1,203" },
-  { name: "Trustpilot",  rating: "4.9", count: "512"   },
-];
 
 export default function Testimonials() {
   return (
@@ -92,23 +87,6 @@ export default function Testimonials() {
               From living rooms to classrooms — real people, real results.
             </p>
           </div>
-        </div>
-
-        {/* Platform ratings */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {platforms.map((p) => (
-            <div key={p.name} className="flex items-center gap-3 bg-white border border-gray-200 rounded-2xl px-5 py-3 shadow-sm">
-              <div>
-                <div className="flex gap-0.5 mb-0.5">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-amber-400 text-sm">★</span>
-                  ))}
-                </div>
-                <p className="text-xs text-gray-500">{p.count} reviews on {p.name}</p>
-              </div>
-              <span className="text-2xl font-black text-gray-900">{p.rating}</span>
-            </div>
-          ))}
         </div>
 
         {/* Review cards */}
