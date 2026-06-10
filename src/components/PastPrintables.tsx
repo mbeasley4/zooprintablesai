@@ -81,7 +81,7 @@ export default function PastPrintables() {
             120+ animals in the archive — all free, no sign-up required.
           </p>
           <a
-            href="/animals"
+            href="/#packs"
             className="inline-flex items-center gap-2 bg-[#2D6A4F] hover:bg-[#1B4332] text-white font-bold px-8 py-4 rounded-full transition-all shadow-md hover:shadow-lg"
           >
             Browse the Full Archive

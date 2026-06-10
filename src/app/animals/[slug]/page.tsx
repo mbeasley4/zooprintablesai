@@ -148,7 +148,8 @@ export default async function AnimalPage({ params }: Props) {
             </div>
 
             <a
-              href="/#packs"
+              href={animal.pdfFile ?? "/#packs"}
+              {...(animal.pdfFile ? { download: true } : {})}
               className="inline-flex items-center gap-2 bg-[#F4A261] hover:bg-[#E76F51] text-white font-bold text-base px-8 py-4 rounded-full transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1"
             >
               Download Free Pack — {animal.activities} Activities
@@ -235,7 +236,8 @@ export default async function AnimalPage({ params }: Props) {
                   <h3 className="text-white font-black text-lg mb-1">{animal.name} Pack</h3>
                   <p className="text-white/50 text-xs mb-4">{animal.activities} activities · Fact sheets · Coloring pages</p>
                   <a
-                    href="/#packs"
+                    href={animal.pdfFile ?? "/#packs"}
+                    {...(animal.pdfFile ? { download: true } : {})}
                     className="block w-full bg-[#F4A261] hover:bg-[#E76F51] text-white font-bold text-sm py-3 rounded-full transition-all shadow-lg hover:-translate-y-0.5"
                   >
                     Download Free
@@ -317,7 +319,8 @@ export default async function AnimalPage({ params }: Props) {
               ))}
             </div>
             <a
-              href="/#packs"
+              href={animal.pdfFile ?? "/#packs"}
+              {...(animal.pdfFile ? { download: true } : {})}
               className="inline-flex items-center gap-2 bg-[#2D6A4F] hover:bg-[#1B4332] text-white font-bold px-8 py-4 rounded-full transition-all shadow-md hover:shadow-lg"
             >
               Download the {animal.name} Pack Free
@@ -351,7 +354,7 @@ export default async function AnimalPage({ params }: Props) {
                 })}
               </div>
               <p className="text-center mt-8">
-                <a href="/animals" className="text-[#2D6A4F] font-bold text-sm hover:underline">
+                <a href="/" className="text-[#2D6A4F] font-bold text-sm hover:underline">
                   View all animal packs →
                 </a>
               </p>

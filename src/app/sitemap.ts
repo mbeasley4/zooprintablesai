@@ -6,7 +6,6 @@ const SITE = "https://www.zooprintablesai.com";
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: SITE,                   lastModified: new Date(), changeFrequency: "weekly",  priority: 1.0 },
-    { url: `${SITE}/animals`,      lastModified: new Date(), changeFrequency: "weekly",  priority: 0.95 },
     { url: `${SITE}/faq`,          lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: `${SITE}/about`,        lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE}/charities`,    lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },

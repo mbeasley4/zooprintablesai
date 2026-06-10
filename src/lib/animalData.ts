@@ -33,6 +33,7 @@ export interface AnimalData {
   funFacts: string[];
   faqs: AnimalFaq[];
   activities: number;
+  pdfFile?: string;
   drMayaNote?: string;
   relatedSlugs: string[];
 }
@@ -83,6 +84,7 @@ export const animals: AnimalData[] = [
       },
     ],
     activities: 34,
+    pdfFile: "/downloads/ZooExplorers_Gorilla.pdf",
     drMayaNote:
       "I spent 14 months studying mountain gorilla social behaviour in Bwindi Impenetrable Forest, Uganda. Watching a silverback play gently with his infants — and seeing just how close their emotions are to our own — is an experience that never leaves you.",
     relatedSlugs: ["cheetah", "bottlenose-dolphin", "polar-bear"],
@@ -132,6 +134,7 @@ export const animals: AnimalData[] = [
       },
     ],
     activities: 28,
+    pdfFile: "/downloads/ZooExplorers_Cheetah.pdf",
     drMayaNote:
       "Studying cheetah coalitions on the Serengeti, Tanzania, showed me how complex their social lives are. Three brothers sharing a territory hunt together and coordinate with the kind of teamwork you'd expect from animals ten times their size.",
     relatedSlugs: ["gorilla", "polar-bear", "great-white-shark"],
