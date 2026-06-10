@@ -124,6 +124,66 @@ export default function AnimalsIndexPage() {
           </div>
         </section>
 
+        {/* Attribution */}
+        <section className="bg-white border-t border-gray-100 py-10 px-4">
+          <div className="max-w-3xl mx-auto">
+            <p className="text-[#2D6A4F] text-[10px] font-bold uppercase tracking-widest mb-4 text-center">
+              Illustration Credits
+            </p>
+            <p className="text-gray-500 text-sm leading-relaxed mb-3">
+              Coloring page illustrations in these packs are sourced from free public resources:
+            </p>
+            <ul className="space-y-2 text-sm text-gray-500 mb-4">
+              <li>
+                <span className="font-semibold text-gray-700">African Elephant, Blue Whale, Gorilla</span>
+                {" — "}
+                <a
+                  href="https://pixabay.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#2D6A4F] hover:underline"
+                >
+                  Pixabay
+                </a>
+                , free under the{" "}
+                <a
+                  href="https://pixabay.com/service/license-summary/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#2D6A4F] hover:underline"
+                >
+                  Pixabay Content License
+                </a>
+              </li>
+              <li>
+                <span className="font-semibold text-gray-700">Amur Leopard, Cheetah, Dhole, Fishing Cat</span>
+                {" — "}
+                <a
+                  href="https://www.supercoloring.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#2D6A4F] hover:underline"
+                >
+                  SuperColoring.com
+                </a>
+                , free printable coloring pages
+              </li>
+            </ul>
+            <p className="text-gray-400 text-sm">
+              Educational facts verified using{" "}
+              <a
+                href="https://kids.nationalgeographic.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#2D6A4F] hover:underline"
+              >
+                National Geographic Kids
+              </a>
+              .
+            </p>
+          </div>
+        </section>
+
       </main>
       <Footer />
     </>
