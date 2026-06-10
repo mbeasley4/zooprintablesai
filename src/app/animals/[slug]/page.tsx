@@ -52,6 +52,23 @@ export default async function AnimalPage({ params }: Props) {
         ],
       },
       {
+        "@type": "LearningResource",
+        "@id": `${SITE}/animals/${animal.slug}#learning-resource`,
+        name: `${animal.name} Wildlife Printable Pack`,
+        description: `Free downloadable ${animal.name.toLowerCase()} educational pack for children ages 3–12. Includes animal fact sheets, coloring pages, and ${animal.activities} activities reviewed by Dr. Maya Okafor, Ph.D.`,
+        url: `${SITE}/animals/${animal.slug}`,
+        provider: { "@id": `${SITE}/#organization` },
+        author: { "@id": `${SITE}/#dr-maya` },
+        educationalLevel: ["Preschool", "Elementary School", "Middle School"],
+        learningResourceType: ["Activity", "Worksheet", "Coloring Page", "Fact Sheet"],
+        teaches: `${animal.name} biology, conservation status, habitat, diet, and wildlife ecology`,
+        audience: { "@type": "EducationalAudience", educationalRole: "student", audienceType: "Children ages 3–12" },
+        about: { "@type": "Thing", name: animal.name, description: animal.description },
+        inLanguage: "en-US",
+        isAccessibleForFree: true,
+        license: "https://creativecommons.org/licenses/by-nc/4.0/",
+      },
+      {
         "@type": "Product",
         name: `${animal.name} Wildlife Printable Pack — Free for Kids`,
         description: `Free downloadable ${animal.name.toLowerCase()} printable pack for children ages 3–12. Includes fact sheets, coloring pages, and ${animal.activities} activity worksheets. Reviewed by Dr. Maya Okafor, Ph.D. Conservation Biology.`,
@@ -65,7 +82,7 @@ export default async function AnimalPage({ params }: Props) {
           price: "0",
           priceCurrency: "USD",
           availability: "https://schema.org/InStock",
-          url: `${SITE}/#packs`,
+          url: `${SITE}/animals/${animal.slug}`,
           priceValidUntil: "2099-12-31",
         },
       },
@@ -74,7 +91,7 @@ export default async function AnimalPage({ params }: Props) {
         name: `${animal.name} Printable Pack PDF`,
         description: `Print-ready PDF: ${animal.name.toLowerCase()} fact sheets, coloring pages, and activity worksheets for kids.`,
         fileFormat: "application/pdf",
-        url: `${SITE}/#packs`,
+        url: `${SITE}/animals/${animal.slug}`,
         author: { "@id": `${SITE}/#dr-maya` },
         inLanguage: "en-US",
         license: "https://creativecommons.org/licenses/by-nc/4.0/",
@@ -108,7 +125,7 @@ export default async function AnimalPage({ params }: Props) {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
       />
       <Navbar />
       <main>
