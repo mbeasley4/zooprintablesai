@@ -5,7 +5,8 @@ import Logo from "./Logo";
 
 const navLinks = [
   { label: "How It Works", href: "/#how-it-works" },
-  { label: "Free Packs",   href: "/#packs" },
+  { label: "Animals A–Z",  href: "/animals" },
+  { label: "Free Packs",   href: "/#archive" },
   { label: "Charities",    href: "/charities" },
   { label: "FAQ",          href: "/faq" },
   { label: "About Dr. Maya", href: "/about" },
@@ -56,7 +57,7 @@ export default function Navbar() {
           </nav>
 
           <a
-            href="/#packs"
+            href="/#archive"
             className="hidden md:inline-block text-sm font-bold bg-[#F4A261] text-white px-5 py-2 rounded-full hover:bg-[#E76F51] transition-colors shadow-md"
           >
             Download Free
@@ -90,7 +91,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="/#packs"
+              href="/#archive"
               className="text-center font-bold bg-[#F4A261] text-white px-4 py-3 rounded-full hover:bg-[#E76F51] transition-colors"
               onClick={() => setMenuOpen(false)}
             >

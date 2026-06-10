@@ -85,7 +85,7 @@ export default function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
-              href="/#archive"
+              href="/animals"
               className="bg-[#F4A261] hover:bg-[#E76F51] text-white font-bold text-base px-8 py-3.5 rounded-full transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1"
             >
               Browse Animals A–Z

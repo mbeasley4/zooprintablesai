@@ -22,7 +22,7 @@ export default function PastPrintables() {
 
         {/* Header with lion photo */}
         <div className="relative rounded-3xl overflow-hidden mb-14 shadow-xl">
-          <div className="relative h-56 sm:h-64">
+          <div className="relative h-96 sm:h-128">
             <Image
               src="/images/site/lion.png"
               alt="Lion standing in golden savanna grass"
@@ -34,11 +34,11 @@ export default function PastPrintables() {
           </div>
           <div className="absolute inset-0 flex flex-col justify-center px-10">
             <p className="section-label text-[#52B788] mb-2" style={{ color: "#52B788" }}>Pack Library</p>
-            <h2 className="text-4xl sm:text-5xl font-black text-white mb-2">
+            <h2 className="text-5xl sm:text-6xl font-black text-white mb-2">
               Explore the{" "}
               <span className="text-[#F4A261]">Animal Archive</span>
             </h2>
-            <p className="text-white/70 text-lg max-w-xl">
+            <p className="text-white/70 text-xl max-w-xl">
               Every past pack is free to download — over 120 animals and counting.
             </p>
           </div>
@@ -81,7 +81,7 @@ export default function PastPrintables() {
             120+ animals in the archive — all free, no sign-up required.
           </p>
           <a
-            href="/#packs"
+            href="/animals"
             className="inline-flex items-center gap-2 bg-[#2D6A4F] hover:bg-[#1B4332] text-white font-bold px-8 py-4 rounded-full transition-all shadow-md hover:shadow-lg"
           >
             Browse the Full Archive

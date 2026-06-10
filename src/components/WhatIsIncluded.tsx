@@ -68,7 +68,7 @@ export default function WhatIsIncluded() {
         </div>
 
         {/* Photo break */}
-        <div className="relative h-64 sm:h-80 rounded-3xl overflow-hidden mb-14 shadow-xl">
+        <div className="relative h-96 sm:h-128 rounded-3xl overflow-hidden mb-14 shadow-xl">
           <Image
             src="/images/site/gorilla-1.png"
             alt="Gorilla in the wild"
@@ -78,8 +78,8 @@ export default function WhatIsIncluded() {
           />
           <div className="absolute inset-0 bg-linear-to-r from-black/65 via-black/30 to-transparent" />
           <div className="absolute inset-0 flex flex-col justify-end p-8 sm:p-10">
-            <p className="text-[#52B788] text-xs font-bold uppercase tracking-widest mb-2">Why It Matters</p>
-            <h3 className="text-white font-black text-2xl sm:text-3xl max-w-sm leading-snug">
+            <p className="text-[#52B788] text-sm font-bold uppercase tracking-widest mb-2">Why It Matters</p>
+            <h3 className="text-white font-black text-3xl sm:text-5xl max-w-sm leading-snug">
               Every kid deserves to know the wild.
             </h3>
           </div>

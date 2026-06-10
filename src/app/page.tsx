@@ -2,7 +2,6 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import WhatIsIncluded from "@/components/WhatIsIncluded";
-import AgeTiers from "@/components/AgeTiers";
 import ImpactStats from "@/components/ImpactStats";
 import Testimonials from "@/components/Testimonials";
 import PastPrintables from "@/components/PastPrintables";
@@ -190,7 +189,6 @@ export default function Home() {
           New animal packs are released every month. No sign-up or payment required.
         </p>
         <WhatIsIncluded />
-        <AgeTiers />
         <ImpactStats />
 
         {/* Elephant photo banner */}

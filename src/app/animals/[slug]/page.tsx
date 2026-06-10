@@ -354,7 +354,7 @@ export default async function AnimalPage({ params }: Props) {
                 })}
               </div>
               <p className="text-center mt-8">
-                <a href="/" className="text-[#2D6A4F] font-bold text-sm hover:underline">
+                <a href="/animals" className="text-[#2D6A4F] font-bold text-sm hover:underline">
                   View all animal packs →
                 </a>
               </p>
