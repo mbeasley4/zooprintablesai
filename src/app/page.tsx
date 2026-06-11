@@ -153,6 +153,25 @@ const jsonLd = {
       })),
     },
 
+    /* ── LearningResource: the free printable library ── */
+    {
+      "@type": "LearningResource",
+      "@id": `${SITE}/#learning-resource`,
+      name: "Zoo Printables AI — Free Wildlife Printable Library",
+      description:
+        "A free library of 120+ wildlife printable packs for children ages 3–12. Each pack includes an animal fact sheet, coloring pages, and age-differentiated activity worksheets covering real conservation science.",
+      url: SITE,
+      author: { "@id": `${SITE}/#dr-maya` },
+      publisher: { "@id": `${SITE}/#organization` },
+      educationalLevel: ["Preschool", "Elementary School"],
+      learningResourceType: ["Activity", "Worksheet", "Coloring Page", "Fact Sheet"],
+      audience: { "@type": "EducationalAudience", educationalRole: "student", audienceType: "Children ages 3–12" },
+      teaches: ["Animal Biology", "Conservation", "Ecology", "Wildlife Science"],
+      inLanguage: "en-US",
+      isAccessibleForFree: true,
+      license: "https://creativecommons.org/licenses/by-nc/4.0/",
+    },
+
     /* ── ItemList: animal archive ── */
     {
       "@type": "ItemList",
@@ -208,6 +227,38 @@ export default function Home() {
               className="bg-[#F4A261] hover:bg-[#E76F51] text-white font-bold px-8 py-3.5 rounded-full transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1"
             >
               Browse Animals A–Z
+            </a>
+          </div>
+        </section>
+
+        {/* Conservation partners strip */}
+        <section className="py-12 px-4 bg-white border-b border-gray-100">
+          <div className="max-w-5xl mx-auto text-center">
+            <p className="text-[#2D6A4F] font-bold text-xs uppercase tracking-widest mb-6">
+              Conservation organizations we recommend
+            </p>
+            <div className="flex flex-wrap justify-center gap-3 mb-6">
+              {[
+                "World Wildlife Fund",
+                "African Wildlife Foundation",
+                "Wildlife Conservation Society",
+                "Panthera",
+                "Save the Elephants",
+                "Ocean Conservancy",
+              ].map((org) => (
+                <span
+                  key={org}
+                  className="bg-[#FEFAE0] border border-[#D4C89A] text-gray-700 text-xs font-semibold px-4 py-2 rounded-full"
+                >
+                  {org}
+                </span>
+              ))}
+            </div>
+            <a
+              href="/charities"
+              className="text-[#2D6A4F] hover:text-[#1B4332] text-sm font-bold underline underline-offset-4 transition-colors"
+            >
+              See all recommended charities →
             </a>
           </div>
         </section>

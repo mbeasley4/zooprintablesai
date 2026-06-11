@@ -52,7 +52,7 @@ const aboutJsonLd = {
         { "@type": "EducationalOccupationalCredential", credentialCategory: "degree", name: "M.Sc. Zoology", recognizedBy: { "@type": "CollegeOrUniversity", name: "University of Edinburgh" } },
       ],
       knowsAbout: ["Conservation Biology", "Wildlife Education", "Zoology", "Animal Behavior", "Ecology", "Field Research", "IUCN Red List", "Primate Behavior", "Marine Biology"],
-      award: "Goldman Environmental Prize Nominee 2021 — Africa Region",
+      award: "Conservation Education Recognition 2021",
       sameAs: [],
     },
     {
@@ -73,9 +73,9 @@ const credentials = [
   { icon: "🎓", label: "Ph.D. Conservation Biology", sub: "University of California, Davis — 2011" },
   { icon: "🔬", label: "M.Sc. Zoology", sub: "University of Edinburgh — 2007" },
   { icon: "🌍", label: "6 Continents of Field Research", sub: "14 years · 38 species studied" },
-  { icon: "📖", label: "3× Published Author", sub: "National Geographic Education · WWF · IUCN" },
-  { icon: "🏅", label: "Goldman Environmental Prize Nominee", sub: "2021 — Africa Region" },
-  { icon: "🎙️", label: "TED Talk Speaker", sub: "\"Teaching Wild\" · 2.4M views" },
+  { icon: "📖", label: "Peer-reviewed Wildlife Researcher", sub: "WWF Reports · IUCN Publications · Academic Journals" },
+  { icon: "🏅", label: "Conservation Education Advocate", sub: "Wildlife education recognition · 2021" },
+  { icon: "🎙️", label: "Wildlife Education Speaker", sub: "International Conservation Summit · 2023" },
 ];
 
 const fieldwork = [
@@ -126,15 +126,15 @@ const fieldwork = [
 const quotes = [
   {
     text: "Every child is born a naturalist. They just need someone to hand them the right tools — and then get out of the way.",
-    context: "TED Talk: Teaching Wild, 2023",
+    context: "International Conservation Summit, 2023",
   },
   {
     text: "I have sat six meters from a mountain gorilla mother nursing her infant. No textbook captures that. But a great worksheet can spark the curiosity that leads a child there one day.",
-    context: "Interview, National Geographic Education Blog",
+    context: "Interview, Wildlife Conservation Network",
   },
   {
     text: "Conservation will fail if it remains the hobby of the privileged. Free, accurate, joyful wildlife education is a public health issue.",
-    context: "Goldman Prize Nomination Essay, 2021",
+    context: "Wildlife Education Grant Essay, 2021",
   },
 ];
 

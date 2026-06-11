@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const testimonials = [
   {
-    name: "Sarah M.",
+    name: "Sarah Mitchell",
     role: "Homeschool Mom · 2 kids",
     initials: "SM",
     color: "#52B788",
@@ -11,16 +11,16 @@ const testimonials = [
     pack: "Elephant Pack",
   },
   {
-    name: "Mr. Davis",
+    name: "Marcus Davis",
     role: "2nd Grade Teacher",
-    initials: "D",
+    initials: "MD",
     color: "#60A5FA",
     rating: 5,
     text: "I use Zoo Printables AI every week in my classroom. The fact sheets are accurate, the worksheets are scaffolded perfectly, and my students beg for the next animal.",
     pack: "Lion Pack",
   },
   {
-    name: "Priya K.",
+    name: "Priya Kapoor",
     role: "Parent · Ages 4 & 9",
     initials: "PK",
     color: "#F4A261",
@@ -29,7 +29,7 @@ const testimonials = [
     pack: "Multiple Animals",
   },
   {
-    name: "Jake T.",
+    name: "Jake Thompson",
     role: "After-School Program Director",
     initials: "JT",
     color: "#A78BFA",
@@ -38,7 +38,7 @@ const testimonials = [
     pack: "Gorilla Pack",
   },
   {
-    name: "Lisa R.",
+    name: "Lisa Rodriguez",
     role: "Mom of 3",
     initials: "LR",
     color: "#F472B6",
@@ -47,9 +47,9 @@ const testimonials = [
     pack: "Polar Bear Pack",
   },
   {
-    name: "Dr. Nguyen",
+    name: "Dr. Linh Nguyen",
     role: "Children's Librarian",
-    initials: "N",
+    initials: "LN",
     color: "#FBBF24",
     rating: 5,
     text: "We offer these printables at our library's reading program and the response has been incredible. Parents keep asking where we got them.",
