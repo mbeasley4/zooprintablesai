@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!animal) return {};
   return {
     title: `${animal.name} Facts for Kids — Free Printable Pack`,
-    description: `Download a free ${animal.name.toLowerCase()} printable pack for kids ages 3–12. Includes ${animal.name.toLowerCase()} fact sheets, coloring pages, and ${animal.activities} activities — reviewed by Dr. Maya Okafor, Ph.D. Conservation Biology.`,
+    description: `Download a free ${animal.name.toLowerCase()} printable pack for kids ages 3–12. Includes ${animal.name.toLowerCase()} fact sheets, coloring pages, and ${animal.activities} activities — facts verified against IUCN Red List data.`,
     alternates: { canonical: `${SITE}/animals/${animal.slug}` },
     openGraph: {
       url: `${SITE}/animals/${animal.slug}`,
@@ -55,10 +55,10 @@ export default async function AnimalPage({ params }: Props) {
         "@type": "LearningResource",
         "@id": `${SITE}/animals/${animal.slug}#learning-resource`,
         name: `${animal.name} Wildlife Printable Pack`,
-        description: `Free downloadable ${animal.name.toLowerCase()} educational pack for children ages 3–12. Includes animal fact sheets, coloring pages, and ${animal.activities} activities reviewed by Dr. Maya Okafor, Ph.D.`,
+        description: `Free downloadable ${animal.name.toLowerCase()} educational pack for children ages 3–12. Includes animal fact sheets, coloring pages, and ${animal.activities} activities. Facts verified against IUCN Red List data.`,
         url: `${SITE}/animals/${animal.slug}`,
         provider: { "@id": `${SITE}/#organization` },
-        author: { "@id": `${SITE}/#dr-maya` },
+        author: { "@id": `${SITE}/#mike-beasley` },
         educationalLevel: ["Preschool", "Elementary School", "Middle School"],
         learningResourceType: ["Activity", "Worksheet", "Coloring Page", "Fact Sheet"],
         teaches: `${animal.name} biology, conservation status, habitat, diet, and wildlife ecology`,
@@ -71,9 +71,9 @@ export default async function AnimalPage({ params }: Props) {
       {
         "@type": "Product",
         name: `${animal.name} Wildlife Printable Pack — Free for Kids`,
-        description: `Free downloadable ${animal.name.toLowerCase()} printable pack for children ages 3–12. Includes fact sheets, coloring pages, and ${animal.activities} activity worksheets. Reviewed by Dr. Maya Okafor, Ph.D. Conservation Biology.`,
+        description: `Free downloadable ${animal.name.toLowerCase()} printable pack for children ages 3–12. Includes fact sheets, coloring pages, and ${animal.activities} activity worksheets. Facts verified against IUCN Red List data.`,
         brand:    { "@type": "Brand", name: "Zoo Printables AI" },
-        author:   { "@id": `${SITE}/#dr-maya` },
+        author:   { "@id": `${SITE}/#mike-beasley` },
         audience: { "@type": "EducationalAudience", educationalRole: "student", audienceType: "Children ages 3–12" },
         educationalLevel: ["Preschool", "Elementary School", "Middle School"],
         learningResourceType: "Worksheet",
@@ -92,7 +92,7 @@ export default async function AnimalPage({ params }: Props) {
         description: `Print-ready PDF: ${animal.name.toLowerCase()} fact sheets, coloring pages, and activity worksheets for kids.`,
         fileFormat: "application/pdf",
         url: `${SITE}/animals/${animal.slug}`,
-        author: { "@id": `${SITE}/#dr-maya` },
+        author: { "@id": `${SITE}/#mike-beasley` },
         inLanguage: "en-US",
         license: "https://creativecommons.org/licenses/by-nc/4.0/",
         educationalLevel: ["Preschool", "Elementary School", "Middle School"],
@@ -111,7 +111,7 @@ export default async function AnimalPage({ params }: Props) {
         url: `${SITE}/animals/${animal.slug}`,
         name: `${animal.name} Facts for Kids — Free Printable Pack`,
         description: `${animal.description}`,
-        author: { "@id": `${SITE}/#dr-maya` },
+        author: { "@id": `${SITE}/#mike-beasley` },
         isPartOf: { "@id": `${SITE}/#website` },
         speakable: {
           "@type": "SpeakableSpecification",
@@ -225,20 +225,20 @@ export default async function AnimalPage({ params }: Props) {
                   ))}
                 </ul>
 
-                {/* Dr. Maya field note */}
+                {/* Founder's Note */}
                 {animal.drMayaNote && (
                   <div className="bg-[#1B4332] rounded-2xl p-6 text-white relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-32 h-32 opacity-5 pointer-events-none">
                       <svg viewBox="0 0 200 200" fill="none"><path d="M220 100 Q140 200 0 160 Q80 80 220 20Z" fill="white"/></svg>
                     </div>
                     <p className="text-[#52B788] text-xs font-bold uppercase tracking-widest mb-3">
-                      Expert Field Note — Dr. Maya Okafor
+                      Founder&apos;s Note — Mike Beasley
                     </p>
                     <p className="text-white/85 text-sm leading-relaxed italic">
                       &ldquo;{animal.drMayaNote}&rdquo;
                     </p>
                     <p className="text-white/40 text-xs mt-3">
-                      Ph.D. Conservation Biology, UC Davis · 14 years field research across 6 continents
+                      Founder, Zoo Printables AI · Full-Stack Developer & AI Platform Builder
                     </p>
                   </div>
                 )}

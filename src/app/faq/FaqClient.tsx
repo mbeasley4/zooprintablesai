@@ -147,7 +147,7 @@ export default function FaqClient() {
             Still Have a Question?
           </h2>
           <p className="text-white/70 mb-7 leading-relaxed">
-            Can&apos;t find what you&apos;re looking for? Reach out — Dr. Maya and the team
+            Can&apos;t find what you&apos;re looking for? Reach out — Mike and the team
             read every message and usually reply within one business day.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -161,7 +161,7 @@ export default function FaqClient() {
               href="/about"
               className="bg-white/15 hover:bg-white/25 border border-white/30 text-white font-bold px-7 py-3 rounded-full transition-all"
             >
-              Meet Dr. Maya
+              Meet the Founder
             </a>
           </div>
         </div>

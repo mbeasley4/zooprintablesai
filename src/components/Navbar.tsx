@@ -9,7 +9,7 @@ const navLinks = [
   { label: "Free Packs",   href: "/#archive" },
   { label: "Charities",    href: "/charities" },
   { label: "FAQ",          href: "/faq" },
-  { label: "About Dr. Maya", href: "/about" },
+  { label: "About the Founder", href: "/about" },
 ];
 
 export default function Navbar() {

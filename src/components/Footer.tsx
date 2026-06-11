@@ -1,27 +1,25 @@
 "use client";
 import Logo from "./Logo";
 
-const footerLinks = {
+type FooterLink = { label: string; href: string; external?: boolean };
+
+const footerLinks: Record<string, FooterLink[]> = {
   "Free Packs": [
-    { label: "Cub Pack (Ages 3–5)", href: "#packs" },
-    { label: "Explorer Pack (Ages 6–9)", href: "#packs" },
-    { label: "Conservationist Pack (Ages 10–12)", href: "#packs" },
+    { label: "Cub Pack (Ages 3–5)", href: "/#packs" },
+    { label: "Explorer Pack (Ages 6–9)", href: "/#packs" },
+    { label: "Conservationist Pack (Ages 10–12)", href: "/#packs" },
     { label: "Animal Archive", href: "/animals" },
-    { label: "All Packs", href: "#packs" },
+    { label: "All Packs", href: "/#packs" },
   ],
   Resources: [
     { label: "Animal Archive", href: "/animals" },
-    { label: "Free Sample Pack", href: "#packs" },
+    { label: "Free Sample Pack", href: "/#packs" },
     { label: "Conservation Partners", href: "/charities" },
     { label: "FAQ", href: "/faq" },
-    { label: "Teaching Guides", href: "#" },
   ],
   Company: [
-    { label: "About Us", href: "/about" },
-    { label: "Our Mission", href: "/about" },
-    { label: "Affiliates", href: "#" },
-    { label: "Press", href: "#" },
-    { label: "Contact", href: "#" },
+    { label: "About the Founder", href: "/about" },
+    { label: "Contact", href: "https://www.linkedin.com/in/michaelkbeasley/", external: true },
   ],
 };
 
@@ -89,6 +87,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <a
                       href={link.href}
+                      {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                       className="text-white/70 hover:text-white text-sm transition-colors"
                     >
                       {link.label}
@@ -102,15 +101,33 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
+      {/* COPPA / trust strip */}
+      <div className="border-t border-white/10 py-3 px-4 bg-white/5">
+        <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-x-6 gap-y-1 text-white/50 text-xs text-center">
+          <span className="flex items-center gap-1.5"><span className="text-[#52B788]">✓</span> Zero Data Collected</span>
+          <span className="flex items-center gap-1.5"><span className="text-[#52B788]">✓</span> 100% COPPA Compliant</span>
+          <span className="flex items-center gap-1.5"><span className="text-[#52B788]">✓</span> No Sign-Up Required</span>
+          <span className="flex items-center gap-1.5"><span className="text-[#52B788]">✓</span> Always Free</span>
+        </div>
+      </div>
+
       <div className="border-t border-white/10 py-5 px-4">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-white/50 text-xs">
           <p>© 2026 Zoo Printables AI. All rights reserved.</p>
           <div className="flex gap-5">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-white transition-colors">Refund Policy</a>
+            <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
           </div>
-          <p>Instant PDF Download · Always Free</p>
+          <p>
+            Imagery enhanced by{" "}
+            <a
+              href="https://www.magnific.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors"
+            >
+              Magnific AI
+            </a>
+          </p>
         </div>
       </div>
     </footer>

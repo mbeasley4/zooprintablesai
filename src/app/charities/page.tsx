@@ -148,7 +148,7 @@ const jsonLd = {
       description: "Zoo Printables AI recommends these top-rated wildlife conservation organizations.",
       url: `${SITE}/charities`,
       isPartOf: { "@id": `${SITE}/#website` },
-      author: { "@id": `${SITE}/#dr-maya` },
+      author: { "@id": `${SITE}/#mike-beasley` },
     },
     {
       "@type": "ItemList",

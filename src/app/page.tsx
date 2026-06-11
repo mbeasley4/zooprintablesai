@@ -24,7 +24,7 @@ const jsonLd = {
       description:
         "Free AI-powered zoo and wildlife printables for kids ages 3–12. Educational worksheets, coloring pages, activity packs, and animal fact sheets — new animal every month.",
       foundingDate: "2025",
-      founder: { "@id": `${SITE}/#dr-maya` },
+      founder: { "@id": `${SITE}/#mike-beasley` },
       sameAs: [
         "https://www.instagram.com/zooprintablesai",
         "https://www.pinterest.com/zooprintablesai",
@@ -34,22 +34,21 @@ const jsonLd = {
       ],
     },
 
-    /* ── Person: Dr. Maya Okafor ── */
+    /* ── Person: Mike Beasley ── */
     {
       "@type": "Person",
-      "@id": `${SITE}/#dr-maya`,
-      name: "Dr. Maya Okafor",
-      jobTitle: "Wildlife Educator & Conservation Biologist",
+      "@id": `${SITE}/#mike-beasley`,
+      name: "Mike Beasley",
+      jobTitle: "Founder & Full-Stack Web Developer",
       description:
-        "Dr. Maya Okafor holds a Ph.D. in Conservation Biology from UC Davis and has conducted field research across six continents over 14 years. She founded Zoo Printables AI to provide free, accurate wildlife education to every child.",
-      image: `${SITE}/images/dr-maya.png`,
+        "Mike Beasley is a full-stack web developer from Cincinnati, Ohio. He built Zoo Printables AI to fill a gap in free, high-quality wildlife educational resources for kids — combining AI content generation with modern web development to make it completely free.",
+      image: `${SITE}/images/mike-profile.png`,
       url: `${SITE}/about`,
-      sameAs: [],
+      sameAs: ["https://www.linkedin.com/in/michaelkbeasley/"],
       alumniOf: [
-        { "@type": "CollegeOrUniversity", name: "University of California, Davis" },
-        { "@type": "CollegeOrUniversity", name: "University of Edinburgh" },
+        { "@type": "CollegeOrUniversity", name: "Northern Kentucky University" },
       ],
-      knowsAbout: ["Conservation Biology", "Wildlife Education", "Zoology", "Animal Behavior", "Ecology"],
+      knowsAbout: ["Full-Stack Web Development", "React", "Next.js", "AI Content Generation", "Educational Technology", "SEO", "AEO"],
       affiliation: { "@id": `${SITE}/#organization` },
     },
 
@@ -161,7 +160,7 @@ const jsonLd = {
       description:
         "A free library of 120+ wildlife printable packs for children ages 3–12. Each pack includes an animal fact sheet, coloring pages, and age-differentiated activity worksheets covering real conservation science.",
       url: SITE,
-      author: { "@id": `${SITE}/#dr-maya` },
+      author: { "@id": `${SITE}/#mike-beasley` },
       publisher: { "@id": `${SITE}/#organization` },
       educationalLevel: ["Preschool", "Elementary School"],
       learningResourceType: ["Activity", "Worksheet", "Coloring Page", "Fact Sheet"],

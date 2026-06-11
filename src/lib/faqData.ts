@@ -20,7 +20,7 @@ export const faqCategories: FaqCategory[] = [
       },
       {
         q: "Who created Zoo Printables AI?",
-        a: "Zoo Printables AI was founded by Dr. Maya Okafor, a conservation biologist and wildlife educator with a Ph.D. from UC Davis and 14 years of field research across six continents. After seeing firsthand how few classrooms had access to accurate, engaging wildlife materials, she built this platform to democratize wildlife education for every child.",
+        a: "Zoo Printables AI was built by Mike Beasley, a full-stack web developer from Cincinnati, Ohio. Mike noticed that quality free wildlife printable packs for kids were either paywalled or low-quality, so he built this platform from the ground up using AI content generation and modern web development — and made it completely free.",
       },
       {
         q: "Is Zoo Printables AI really free?",
@@ -28,7 +28,7 @@ export const faqCategories: FaqCategory[] = [
       },
       {
         q: "How does AI help create the printables?",
-        a: "Zoo Printables AI uses artificial intelligence to research, design, and generate age-appropriate educational content for each animal pack. The AI draws on up-to-date zoological data and conservation status information to produce accurate fact sheets, coloring pages, and activity packs — which are then reviewed by Dr. Maya Okafor for scientific accuracy before publishing.",
+        a: "Zoo Printables AI uses artificial intelligence to research, design, and generate age-appropriate educational content for each animal pack. The AI draws on up-to-date zoological data and conservation status information sourced from the IUCN Red List, National Geographic, and leading zoo databases to produce accurate fact sheets, coloring pages, and activity packs.",
       },
       {
         q: "How many animal packs are available?",
@@ -76,7 +76,7 @@ export const faqCategories: FaqCategory[] = [
       },
       {
         q: "Are the animal facts scientifically accurate?",
-        a: "Yes. Scientific accuracy is a core commitment of Zoo Printables AI. All animal information is generated using current zoological data and reviewed by Dr. Maya Okafor, a conservation biologist with 14 years of field research. Conservation status classifications follow the IUCN Red List, updated at each pack release.",
+        a: "Yes. Scientific accuracy is a core commitment of Zoo Printables AI. All animal information is generated using current zoological data sourced from the IUCN Red List, National Geographic Kids, and reputable zoo databases. Conservation status classifications follow the IUCN Red List and are updated at each pack release.",
       },
       {
         q: "Are there printables for preschoolers?",

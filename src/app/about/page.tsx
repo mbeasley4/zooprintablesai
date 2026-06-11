@@ -6,17 +6,17 @@ import Footer from "@/components/Footer";
 const SITE = "https://www.zooprintablesai.com";
 
 export const metadata: Metadata = {
-  title: "Meet Dr. Maya Okafor — Wildlife Educator & Founder",
+  title: "Meet Mike Beasley — Founder of Zoo Printables AI",
   description:
-    "Dr. Maya Okafor is a conservation biologist and wildlife educator with 14 years of field research across six continents. She founded Zoo Printables AI to give every child free access to world-class wildlife education.",
+    "Mike Beasley is a full-stack web developer from Cincinnati, Ohio, and the founder of Zoo Printables AI — a completely free library of AI-crafted wildlife printables for kids ages 3–12.",
   alternates: { canonical: `${SITE}/about` },
   openGraph: {
     type: "profile",
     url: `${SITE}/about`,
-    title: "Dr. Maya Okafor — Wildlife Educator & Founder of Zoo Printables AI",
+    title: "Mike Beasley — Founder of Zoo Printables AI",
     description:
-      "Conservation biologist with a Ph.D. from UC Davis and 14 years of field research. Founder of Zoo Printables AI — free wildlife education for every child.",
-    images: [{ url: `${SITE}/images/dr-maya.png`, width: 600, height: 750, alt: "Dr. Maya Okafor" }],
+      "Full-stack web developer who built Zoo Printables AI to put free, high-quality wildlife education in every home and classroom.",
+    images: [{ url: `${SITE}/images/mike-profile.png`, width: 600, height: 750, alt: "Mike Beasley" }],
   },
 };
 
@@ -27,122 +27,93 @@ const aboutJsonLd = {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: SITE },
-        { "@type": "ListItem", position: 2, name: "About Dr. Maya", item: `${SITE}/about` },
+        { "@type": "ListItem", position: 2, name: "About Mike", item: `${SITE}/about` },
       ],
     },
     {
       "@type": "Person",
-      "@id": `${SITE}/#dr-maya`,
-      name: "Dr. Maya Okafor",
-      givenName: "Maya",
-      familyName: "Okafor",
-      honorificPrefix: "Dr.",
-      jobTitle: "Wildlife Educator & Conservation Biologist",
+      "@id": `${SITE}/#mike-beasley`,
+      name: "Mike Beasley",
+      givenName: "Mike",
+      familyName: "Beasley",
+      jobTitle: "Founder & Full-Stack Web Developer",
       description:
-        "Dr. Maya Okafor is a conservation biologist and founder of Zoo Printables AI. She holds a Ph.D. in Conservation Biology from UC Davis and has conducted field research with 38 species across 6 continents over 14 years.",
-      image: `${SITE}/images/dr-maya.png`,
+        "Mike Beasley is a full-stack web developer from Cincinnati, Ohio, and the founder of Zoo Printables AI. He builds high-performance web platforms and AI-integrated content systems, and created Zoo Printables AI to provide completely free wildlife education resources for kids.",
+      image: `${SITE}/images/mike-profile.png`,
       url: `${SITE}/about`,
       worksFor: { "@type": "Organization", name: "Zoo Printables AI", url: SITE },
       alumniOf: [
-        { "@type": "CollegeOrUniversity", name: "University of California, Davis", sameAs: "https://www.ucdavis.edu" },
-        { "@type": "CollegeOrUniversity", name: "University of Edinburgh", sameAs: "https://www.ed.ac.uk" },
+        { "@type": "CollegeOrUniversity", name: "Northern Kentucky University", sameAs: "https://www.nku.edu" },
       ],
-      hasCredential: [
-        { "@type": "EducationalOccupationalCredential", credentialCategory: "degree", name: "Ph.D. Conservation Biology", recognizedBy: { "@type": "CollegeOrUniversity", name: "University of California, Davis" } },
-        { "@type": "EducationalOccupationalCredential", credentialCategory: "degree", name: "M.Sc. Zoology", recognizedBy: { "@type": "CollegeOrUniversity", name: "University of Edinburgh" } },
+      knowsAbout: [
+        "Full-Stack Web Development",
+        "React",
+        "Next.js",
+        "AI Content Generation",
+        "Educational Technology",
+        "SEO",
+        "AEO",
+        "WordPress",
+        "Drupal",
+        "Shopify",
       ],
-      knowsAbout: ["Conservation Biology", "Wildlife Education", "Zoology", "Animal Behavior", "Ecology", "Field Research", "IUCN Red List", "Primate Behavior", "Marine Biology"],
-      award: "Conservation Education Recognition 2021",
-      sameAs: [],
+      sameAs: ["https://www.linkedin.com/in/michaelkbeasley/"],
     },
     {
       "@type": "WebPage",
       "@id": `${SITE}/about#webpage`,
       url: `${SITE}/about`,
-      name: "Meet Dr. Maya Okafor — Wildlife Educator & Founder of Zoo Printables AI",
+      name: "Meet Mike Beasley — Founder of Zoo Printables AI",
       description:
-        "Learn about Dr. Maya Okafor, conservation biologist and founder of Zoo Printables AI. 14 years of field research across six continents, now dedicated to free wildlife education for every child.",
+        "Learn about Mike Beasley, full-stack web developer and founder of Zoo Printables AI — a free library of AI-crafted wildlife printables for kids ages 3–12.",
       isPartOf: { "@type": "WebSite", url: SITE },
-      about: { "@id": `${SITE}/#dr-maya` },
+      about: { "@id": `${SITE}/#mike-beasley` },
       speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", ".bio-speakable"] },
     },
   ],
 };
 
 const credentials = [
-  { icon: "🎓", label: "Ph.D. Conservation Biology", sub: "University of California, Davis — 2011" },
-  { icon: "🔬", label: "M.Sc. Zoology", sub: "University of Edinburgh — 2007" },
-  { icon: "🌍", label: "6 Continents of Field Research", sub: "14 years · 38 species studied" },
-  { icon: "📖", label: "Peer-reviewed Wildlife Researcher", sub: "WWF Reports · IUCN Publications · Academic Journals" },
-  { icon: "🏅", label: "Conservation Education Advocate", sub: "Wildlife education recognition · 2021" },
-  { icon: "🎙️", label: "Wildlife Education Speaker", sub: "International Conservation Summit · 2023" },
+  { icon: "💻", label: "Full-Stack Web Developer", sub: "React · Next.js · WordPress · Drupal · Shopify" },
+  { icon: "🤖", label: "AI Platform Builder", sub: "AI-integrated content · AEO/SEO optimization" },
+  { icon: "🎓", label: "Northern Kentucky University", sub: "Computer Science" },
+  { icon: "🌐", label: "10+ Years Building for the Web", sub: "High-performance platforms at scale" },
+  { icon: "🔗", label: "LinkedIn", sub: "linkedin.com/in/michaelkbeasley" },
+  { icon: "🌿", label: "Founder, Zoo Printables AI", sub: "120+ free packs · 48,000+ downloads · always free" },
 ];
 
-const fieldwork = [
+const process = [
   {
-    year: "2008–2010",
-    location: "Bwindi Impenetrable Forest, Uganda",
-    animal: "🦍",
-    title: "Mountain Gorilla Behavioral Study",
-    desc: "Embedded with a 23-member gorilla troop for 26 months, documenting tool use, infant socialization, and conflict resolution. Findings contributed to updated IUCN threat classifications.",
+    step: "01",
+    emoji: "📚",
+    title: "Animal Research",
+    desc: "Each animal is researched using the IUCN Red List, National Geographic, Smithsonian databases, and leading zoo resources to gather accurate facts on habitat, diet, behavior, and conservation status.",
   },
   {
-    year: "2011–2013",
-    location: "Serengeti National Park, Tanzania",
-    animal: "🐆",
-    title: "Cheetah Coalition Dynamics",
-    desc: "Tracked GPS-collared coalitions of male cheetahs over two migration cycles. Identified previously unknown cooperative hunting patterns in non-sibling groups, published in Journal of Zoology.",
+    step: "02",
+    emoji: "🤖",
+    title: "AI Content Generation",
+    desc: "AI tools generate age-appropriate fact sheets, coloring page descriptions, and activity worksheets — scaffolded across three age tiers (ages 3–5, 6–9, 10–12) for every animal.",
   },
   {
-    year: "2014–2015",
-    location: "Amazon Basin, Brazil",
-    animal: "🐊",
-    title: "Black Caiman Population Recovery",
-    desc: "Led a tri-national survey of black caiman nesting sites across 1,200 km of river system. Survey data informed Brazilian federal wetland protections enacted in 2016.",
+    step: "03",
+    emoji: "✅",
+    title: "Fact Verification",
+    desc: "Every fact is cross-referenced against the IUCN Red List and published wildlife databases. Conservation status classifications are reviewed at each pack release to stay current.",
   },
   {
-    year: "2016–2018",
-    location: "Sundarbans, Bangladesh",
-    animal: "🐅",
-    title: "Bengal Tiger Human-Wildlife Conflict",
-    desc: "Developed community-led early-warning systems for tiger proximity events, reducing livestock loss by 62% and retaliatory killing incidents by 80% across 14 villages.",
-  },
-  {
-    year: "2019–2021",
-    location: "Great Barrier Reef, Australia",
-    animal: "🦈",
-    title: "Reef Shark Corridor Mapping",
-    desc: "Collaborated with AIMS to map migratory corridors for three shark species. Results directly shaped new MPA boundary proposals submitted to the Australian Environment Ministry.",
-  },
-  {
-    year: "2022–Present",
-    location: "Global · Remote",
-    animal: "🤖",
-    title: "Founding Zoo Printables AI",
-    desc: "After years watching classrooms lack access to accurate, engaging wildlife materials, Dr. Maya built Zoo Printables AI to put world-class animal education in every home — completely free.",
-  },
-];
-
-const quotes = [
-  {
-    text: "Every child is born a naturalist. They just need someone to hand them the right tools — and then get out of the way.",
-    context: "International Conservation Summit, 2023",
-  },
-  {
-    text: "I have sat six meters from a mountain gorilla mother nursing her infant. No textbook captures that. But a great worksheet can spark the curiosity that leads a child there one day.",
-    context: "Interview, Wildlife Conservation Network",
-  },
-  {
-    text: "Conservation will fail if it remains the hobby of the privileged. Free, accurate, joyful wildlife education is a public health issue.",
-    context: "Wildlife Education Grant Essay, 2021",
+    step: "04",
+    emoji: "📄",
+    title: "Design & Publish Free",
+    desc: "Packs are formatted as print-ready PDFs — optimized for standard home and classroom printers in both color and black-and-white — and published to the free archive, no paywall.",
   },
 ];
 
 const stats = [
-  { value: "38", label: "Species Studied" },
-  { value: "6", label: "Continents" },
-  { value: "14yrs", label: "Field Research" },
-  { value: "120+", label: "Free Packs Created" },
+  { value: "120+", label: "Free Packs" },
+  { value: "48K+", label: "Downloads" },
+  { value: "$0", label: "Cost to Families" },
+  { value: "10+", label: "Years Building" },
 ];
 
 export default function AboutPage() {
@@ -157,7 +128,6 @@ export default function AboutPage() {
 
         {/* ── Hero banner ── */}
         <section className="relative overflow-hidden bg-[#1B4332]">
-          {/* Leaf decorations */}
           <div className="absolute top-0 left-0 w-64 h-64 opacity-10">
             <svg viewBox="0 0 200 200" fill="none"><path d="M-20 100 Q60 0 200 40 Q120 120 -20 180Z" fill="#52b788"/></svg>
           </div>
@@ -168,14 +138,12 @@ export default function AboutPage() {
           <div className="max-w-6xl mx-auto px-4 py-20 flex flex-col lg:flex-row items-center gap-12 relative z-10">
             {/* Portrait */}
             <div className="shrink-0 relative">
-              {/* Decorative rings */}
               <div className="absolute inset-0 rounded-full border-4 border-[#52B788]/50 scale-110 pointer-events-none" />
               <div className="absolute inset-0 rounded-full border-2 border-[#F4A261]/30 scale-125 pointer-events-none" />
-              {/* Photo */}
               <div className="w-64 h-64 sm:w-72 sm:h-72 rounded-full overflow-hidden border-4 border-[#52B788] shadow-2xl relative">
                 <Image
-                  src="/images/dr-maya.png"
-                  alt="Dr. Maya Okafor — Wildlife Biologist and Conservation Educator at her desk"
+                  src="/images/mike-profile.png"
+                  alt="Mike Beasley — Founder of Zoo Printables AI"
                   fill
                   className="object-cover object-top"
                   priority
@@ -187,19 +155,20 @@ export default function AboutPage() {
             {/* Intro */}
             <div className="text-center lg:text-left">
               <div className="inline-flex items-center gap-2 bg-[#F4A261]/20 border border-[#F4A261]/40 text-[#F4A261] text-xs font-bold px-4 py-1.5 rounded-full mb-4 uppercase tracking-widest">
-                Founder & Wildlife Educator
+                Founder &amp; Full-Stack Developer
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-3">
-                Dr. Maya Okafor
+                Mike Beasley
               </h1>
               <p className="text-[#52B788] font-semibold text-lg mb-5">
-                Ph.D. Conservation Biology · Field Zoologist · Educator
+                Full-Stack Developer · AI Platform Builder · Cincinnati, OH
               </p>
               <p className="bio-speakable text-white/75 text-lg leading-relaxed max-w-2xl">
-                Fourteen years in the field — from Ugandan rainforests to the Great Barrier Reef —
-                taught Dr. Maya one thing above all else: the children who grow up learning to love
-                animals become the adults who fight to save them. So she built Zoo Printables AI
-                to make that love free, accessible, and joyful for every kid on earth.
+                Mike is a full-stack web developer with over a decade of experience building
+                high-performance web platforms. When he couldn&apos;t find quality free wildlife
+                printable resources for kids, he built Zoo Printables AI — combining AI content
+                generation with modern web development to create a completely free library of
+                animal education for every family and classroom on earth.
               </p>
 
               {/* Quick stats */}
@@ -219,7 +188,7 @@ export default function AboutPage() {
         <section className="bg-white border-b border-gray-100 py-12 px-4">
           <div className="max-w-6xl mx-auto">
             <p className="text-center text-[#2D6A4F] font-bold text-sm uppercase tracking-widest mb-8">
-              Credentials & Recognition
+              Background &amp; Skills
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {credentials.map((c) => (
@@ -240,108 +209,59 @@ export default function AboutPage() {
           <div className="text-center mb-10">
             <div className="section-divider" />
             <h2 className="text-3xl sm:text-4xl font-black text-gray-900">
-              The Story Behind the Packs
+              Why He Built It
             </h2>
           </div>
 
           <div className="max-w-none text-gray-700 space-y-5 leading-relaxed text-lg">
             <p>
-              Dr. Maya Okafor grew up in Lagos, Nigeria, where her grandmother kept a worn copy of
-              <em> A Field Guide to the Larger Mammals of Africa</em> on the kitchen shelf. Every
-              Sunday, they would read one entry together — studying the illustrations, imitating the
-              calls, debating why an animal looked the way it did. Those Sundays became Dr. Maya&apos;s
-              north star.
+              Mike Beasley has spent over a decade building websites and web applications —
+              everything from e-commerce stores to AI-integrated content platforms. In 2024,
+              searching for wildlife printable packs to print for kids, he ran into the same
+              wall every parent and teacher does: the good ones cost money, and the free ones
+              are mediocre at best.
             </p>
             <p>
-              She earned a scholarship to study zoology in Edinburgh, then a PhD fellowship at UC Davis,
-              then spent the better part of a decade living in tents, river camps, and village guesthouses
-              across six continents — studying mountain gorillas in Uganda, cheetah coalitions in Tanzania,
-              black caiman in the Amazon, and reef sharks off Australia.
-            </p>
-            <p>
-              In 2019, between expeditions, she was invited to speak at a rural primary school in
-              Mwanza, Tanzania. The teacher apologized in advance: they had no wildlife books, no
-              projector, no printed materials. The children sat on benches and listened to Dr. Maya
-              describe a gorilla for forty-five minutes. Afterward, a girl named Amara asked her
-              if she could draw one.
+              The gap was obvious. Kids&apos; interest in animals is practically universal — but
+              access to genuinely good, free, printable wildlife education resources was not.
+              Subscription services charged monthly fees. TPT listings charged per pack.
+              Free alternatives were clipart-level quality with no real educational content.
             </p>
             <p className="italic border-l-4 border-[#F4A261] pl-5 text-gray-600">
-              &ldquo;I had nothing to give her. That moment broke something in me and then rebuilt it.
-              I went home and started sketching what a perfect animal worksheet would look like —
-              something accurate, engaging, and completely free.&rdquo;
+              &ldquo;I build web platforms for a living. I work with AI content tools every day.
+              Making this free wasn&apos;t the hard part — it was the obvious thing to do.&rdquo;
             </p>
             <p>
-              Three years later, after learning to work with AI-generation tools, Dr. Maya launched
-              Zoo Printables AI — a growing library of beautifully designed, scientifically accurate
-              wildlife printables covering 120+ animals — fact sheets, coloring pages, and activity packs — free to download
-              for every family and classroom on earth. No sign-up. No paywall. No catch.
+              So he built Zoo Printables AI from the ground up: an AI-powered pipeline that
+              researches each animal from authoritative sources, generates age-differentiated
+              educational content, and publishes it as a free, print-ready PDF. No paywall.
+              No sign-up. No catch. 120+ animals and counting.
             </p>
           </div>
         </section>
 
-        {/* ── Field research timeline ── */}
+        {/* ── How the packs are made ── */}
         <section className="bg-white py-16 px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
-              <p className="text-[#2D6A4F] font-bold text-sm uppercase tracking-widest mb-2">Field Research</p>
+              <p className="text-[#2D6A4F] font-bold text-sm uppercase tracking-widest mb-2">Process</p>
               <div className="section-divider" />
               <h2 className="text-3xl sm:text-4xl font-black text-gray-900">
-                14 Years Across Six Continents
+                How Every Pack Is Made
               </h2>
             </div>
 
-            <div className="relative">
-              {/* Timeline line */}
-              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-linear-to-b from-[#2D6A4F] to-[#F4A261] hidden md:block" />
-
-              <div className="space-y-8">
-                {fieldwork.map((item, i) => (
-                  <div key={i} className="flex gap-6 items-start">
-                    {/* Timeline dot */}
-                    <div className="hidden md:flex flex-col items-center shrink-0 w-16">
-                      <div className="w-10 h-10 rounded-full bg-[#2D6A4F] border-4 border-[#FEFAE0] flex items-center justify-center text-lg shadow-md z-10">
-                        {item.animal}
-                      </div>
-                    </div>
-
-                    {/* Card */}
-                    <div className="flex-1 bg-[#FEFAE0] rounded-2xl border border-[#D4C89A] p-6 card-hover">
-                      <div className="flex flex-wrap items-start gap-3 mb-2">
-                        <span className="bg-[#2D6A4F] text-white text-xs font-bold px-3 py-1 rounded-full">
-                          {item.year}
-                        </span>
-                        <span className="text-[#F4A261] text-xs font-semibold">
-                          📍 {item.location}
-                        </span>
-                      </div>
-                      <h3 className="text-lg font-black text-gray-900 mb-2">
-                        <span className="md:hidden mr-2">{item.animal}</span>
-                        {item.title}
-                      </h3>
-                      <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
-                    </div>
+            <div className="grid sm:grid-cols-2 gap-6">
+              {process.map((item) => (
+                <div key={item.step} className="flex gap-5 items-start bg-[#FEFAE0] rounded-2xl border border-[#D4C89A] p-6 card-hover">
+                  <div className="shrink-0 w-10 h-10 rounded-full bg-[#2D6A4F] flex items-center justify-center text-white font-black text-sm">
+                    {item.step}
                   </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── Quotes ── */}
-        <section className="bg-[#1B4332] py-16 px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-10">
-              <p className="text-[#52B788] font-bold text-sm uppercase tracking-widest mb-2">In Her Words</p>
-              <div className="section-divider" />
-              <h2 className="text-3xl font-black text-white">What Drives Dr. Maya</h2>
-            </div>
-
-            <div className="space-y-6">
-              {quotes.map((q, i) => (
-                <div key={i} className="bg-white/8 backdrop-blur-sm border border-white/15 rounded-2xl p-7">
-                  <div className="text-[#F4A261] text-4xl font-black leading-none mb-3 opacity-60">&ldquo;</div>
-                  <p className="text-white text-lg leading-relaxed font-medium mb-4">{q.text}</p>
-                  <p className="text-white/50 text-sm italic">— {q.context}</p>
+                  <div>
+                    <div className="text-2xl mb-1">{item.emoji}</div>
+                    <h3 className="text-lg font-black text-gray-900 mb-2">{item.title}</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -356,9 +276,9 @@ export default function AboutPage() {
               The Mission is Simple
             </h2>
             <p className="text-gray-700 text-lg leading-relaxed mb-8">
-              Every child deserves to know the wonder of the natural world — not as a luxury,
-              but as a birthright. Zoo Printables AI exists to remove every barrier between
-              a curious kid and the most extraordinary creatures on earth.
+              Every child deserves access to high-quality wildlife education — not as a premium
+              product, but as a free resource. Zoo Printables AI exists to remove every barrier
+              between a curious kid and the most extraordinary creatures on earth.
               <br /><br />
               Free. Always.
             </p>
@@ -370,10 +290,12 @@ export default function AboutPage() {
                 Browse the Free Packs ⬇️
               </a>
               <a
-                href="/#reviews"
+                href="https://www.linkedin.com/in/michaelkbeasley/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="border-2 border-[#2D6A4F] text-[#2D6A4F] hover:bg-[#2D6A4F] hover:text-white font-bold px-8 py-4 rounded-full transition-all"
               >
-                Read Family Reviews
+                Connect on LinkedIn
               </a>
             </div>
           </div>

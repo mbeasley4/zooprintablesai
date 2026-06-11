@@ -8,7 +8,7 @@ const SITE = "https://www.zooprintablesai.com";
 export const metadata: Metadata = {
   title: "Free Animal Printable Packs A–Z — Wildlife Activities for Kids",
   description:
-    "Browse 120+ free wildlife printable packs for kids ages 3–12. Every animal includes fact sheets, coloring pages, and activity worksheets — reviewed by Dr. Maya Okafor, Ph.D.",
+    "Browse 120+ free wildlife printable packs for kids ages 3–12. Every animal includes fact sheets, coloring pages, and activity worksheets — facts verified against IUCN Red List data.",
   alternates: { canonical: `${SITE}/animals` },
   openGraph: {
     url: `${SITE}/animals`,
@@ -36,7 +36,7 @@ const jsonLd = {
       name: "Free Animal Printable Packs A–Z",
       description: "Browse all free wildlife printable packs for kids ages 3–12 from Zoo Printables AI.",
       url: `${SITE}/animals`,
-      author: { "@id": `${SITE}/#dr-maya` },
+      author: { "@id": `${SITE}/#mike-beasley` },
     },
     {
       "@type": "ItemList",
@@ -179,6 +179,20 @@ export default function AnimalsIndexPage() {
                   SuperColoring.com
                 </a>
                 , free printable coloring pages
+              </li>
+            </ul>
+            <ul className="space-y-2 text-sm text-gray-500 mb-4">
+              <li>
+                <span className="font-semibold text-gray-700">Site imagery</span>
+                {" — enhanced and upscaled using "}
+                <a
+                  href="https://www.magnific.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#2D6A4F] hover:underline"
+                >
+                  Magnific AI
+                </a>
               </li>
             </ul>
             <p className="text-gray-400 text-sm">

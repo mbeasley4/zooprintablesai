@@ -35,7 +35,7 @@ const jsonLd = {
       name: "FAQ — Zoo Printables AI",
       description: "Frequently asked questions about Zoo Printables AI free wildlife printables for kids ages 3–12.",
       isPartOf: { "@id": `${SITE}/#website` },
-      author: { "@id": `${SITE}/#dr-maya` },
+      author: { "@id": `${SITE}/#mike-beasley` },
     },
     {
       "@type": "FAQPage",
