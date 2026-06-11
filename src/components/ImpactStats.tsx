@@ -32,6 +32,9 @@ export default function ImpactStats() {
           <p className="text-white/60 text-lg max-w-xl mx-auto">
             Thousands of families and educators trust Zoo Printables AI every month.
           </p>
+          <p className="text-white/30 text-xs mt-3 font-mono">
+            Stats last reported · June 2026
+          </p>
         </div>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 mb-16">

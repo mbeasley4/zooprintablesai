@@ -108,6 +108,7 @@ const jsonLd = {
         priceValidUntil: "2099-12-31",
       },
       aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", bestRating: "5", reviewCount: "2562" },
+      dateModified: "2026-06-11",
     },
 
     /* ── HowTo: How to download a free printable pack ── */
