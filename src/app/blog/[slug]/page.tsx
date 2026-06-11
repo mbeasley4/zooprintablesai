@@ -75,13 +75,17 @@ export default async function BlogPostPage({ params }: Props) {
     ? urlFor(post.featureImage).width(1600).height(640).fit("crop").auto("format").url()
     : null;
 
+  const jsonLdImage = post.featureImage?.asset
+    ? urlFor(post.featureImage).width(1200).height(630).fit("crop").url()
+    : `${SITE}/og-image.png`;
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "@id": `${SITE}/blog/${slug}#blogposting`,
     headline: post.title,
     description: post.metaDescription ?? post.excerpt,
-    image: urlFor(post.featureImage).width(1200).height(630).fit("crop").url(),
+    image: jsonLdImage,
     datePublished: post.createDate,
     url: `${SITE}/blog/${slug}`,
     mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE}/blog/${slug}` },
