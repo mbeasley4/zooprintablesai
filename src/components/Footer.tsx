@@ -57,7 +57,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand column */}
           <div className="lg:col-span-2">
-            <Logo size={32} variant="full" className="mb-4" />
+            <Logo size={48} variant="full" className="mb-4 drop-shadow-md" />
             <p className="text-white/70 text-sm leading-relaxed mb-5 max-w-xs">
               Free AI-powered zoo printables for curious kids ages 3–12. New animal every month,
               instant download, completely free.

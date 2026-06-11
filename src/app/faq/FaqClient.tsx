@@ -45,7 +45,7 @@ export default function FaqClient() {
     : faqCategories;
 
   return (
-    <main className="bg-[#FEFAE0] pt-16">
+    <main className="bg-[#FEFAE0] pt-24">
 
       {/* ── Hero ── */}
       <section className="bg-[#1B4332] py-16 px-4 relative overflow-hidden">

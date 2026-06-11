@@ -54,7 +54,7 @@ export default function PrivacyPage() {
   return (
     <>
       <Navbar />
-      <main className="bg-[#FEFAE0] pt-16 min-h-screen">
+      <main className="bg-[#FEFAE0] pt-24 min-h-screen">
 
         {/* Hero */}
         <div className="bg-[#1B4332] pt-16 pb-12 px-4">

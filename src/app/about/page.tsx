@@ -124,7 +124,7 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutJsonLd) }}
       />
       <Navbar />
-      <main className="bg-[#FEFAE0] pt-16">
+      <main className="bg-[#FEFAE0] pt-24">
 
         {/* ── Hero banner ── */}
         <section className="relative overflow-hidden bg-[#1B4332]">

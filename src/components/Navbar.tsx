@@ -36,9 +36,9 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-24">
           <a href="/" aria-label="Zoo Printables AI Home">
-            <Logo size={36} onDark={onDark} />
+            <Logo size={72} onDark={onDark} className="drop-shadow-md" />
           </a>
 
           {/* Desktop nav */}
