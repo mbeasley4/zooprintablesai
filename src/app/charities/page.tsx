@@ -2,14 +2,19 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+const SITE = "https://www.zooprintablesai.com";
+
 export const metadata: Metadata = {
   title: "Wildlife Charities We Recommend | Zoo Printables AI",
   description:
     "Zoo Printables AI is free — no markups, no donations skimmed from a sale. Instead we point you directly to the wildlife conservation organizations doing the most important work.",
+  alternates: { canonical: `${SITE}/charities` },
   openGraph: {
+    url: `${SITE}/charities`,
     title: "Wildlife Charities We Recommend | Zoo Printables AI",
     description:
       "Hand-picked, highly rated wildlife conservation charities across big cats, elephants, oceans, birds, and global habitat protection.",
+    images: [{ url: `${SITE}/og-image.png`, width: 1200, height: 630 }],
   },
 };
 
@@ -131,29 +136,34 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://zooprintablesai.com" },
-        { "@type": "ListItem", position: 2, name: "Wildlife Charities", item: "https://zooprintablesai.com/charities" },
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE },
+        { "@type": "ListItem", position: 2, name: "Wildlife Charities", item: `${SITE}/charities` },
       ],
     },
     {
       "@type": "WebPage",
-      "@id": "https://zooprintablesai.com/charities",
+      "@id": `${SITE}/charities`,
       name: "Wildlife Charities We Recommend",
       description: "Zoo Printables AI recommends these top-rated wildlife conservation organizations.",
-      url: "https://zooprintablesai.com/charities",
-      isPartOf: { "@id": "https://zooprintablesai.com/#website" },
+      url: `${SITE}/charities`,
+      isPartOf: { "@id": `${SITE}/#website` },
+      author: { "@id": `${SITE}/#dr-maya` },
     },
     {
       "@type": "ItemList",
-      name: "Recommended Wildlife Charities",
+      name: "Recommended Wildlife Conservation Organizations",
       numberOfItems: charities.length,
       itemListElement: charities.map((c, i) => ({
         "@type": "ListItem",
         position: i + 1,
-        name: c.name,
-        url: c.url,
-        description: c.description,
+        item: {
+          "@type": "Organization",
+          name: c.name,
+          url: c.url,
+          description: c.description,
+          knowsAbout: c.tags,
+        },
       })),
     },
   ],

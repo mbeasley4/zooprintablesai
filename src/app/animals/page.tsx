@@ -18,6 +18,8 @@ export const metadata: Metadata = {
   },
 };
 
+const sorted = [...animals].sort((a, b) => a.name.localeCompare(b.name));
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -36,10 +38,20 @@ const jsonLd = {
       url: `${SITE}/animals`,
       author: { "@id": `${SITE}/#dr-maya` },
     },
+    {
+      "@type": "ItemList",
+      name: "Free Animal Printable Packs A–Z",
+      description: "Complete list of free wildlife printable packs for kids ages 3–12.",
+      numberOfItems: sorted.length,
+      itemListElement: sorted.map((a, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: `${a.name} Wildlife Printable Pack`,
+        url: `${SITE}/animals/${a.slug}`,
+      })),
+    },
   ],
 };
-
-const sorted = [...animals].sort((a, b) => a.name.localeCompare(b.name));
 
 export default function AnimalsIndexPage() {
   return (

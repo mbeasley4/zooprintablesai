@@ -7,6 +7,7 @@ import Testimonials from "@/components/Testimonials";
 import PastPrintables from "@/components/PastPrintables";
 import Footer from "@/components/Footer";
 import { allFaqs } from "@/lib/faqData";
+import { animals } from "@/lib/animalData";
 
 const SITE = "https://www.zooprintablesai.com";
 
@@ -156,18 +157,14 @@ const jsonLd = {
     {
       "@type": "ItemList",
       name: "Zoo Printables AI Animal Pack Archive",
-      description: "Free downloadable wildlife printable packs covering 120+ animals.",
-      numberOfItems: 120,
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "African Elephant Wildlife Printable Pack", url: `${SITE}/#packs` },
-        { "@type": "ListItem", position: 2, name: "Cheetah Wildlife Printable Pack", url: `${SITE}/#packs` },
-        { "@type": "ListItem", position: 3, name: "Mountain Gorilla Wildlife Printable Pack", url: `${SITE}/#packs` },
-        { "@type": "ListItem", position: 4, name: "Great White Shark Wildlife Printable Pack", url: `${SITE}/#packs` },
-        { "@type": "ListItem", position: 5, name: "Bengal Tiger Wildlife Printable Pack", url: `${SITE}/#packs` },
-        { "@type": "ListItem", position: 6, name: "Polar Bear Wildlife Printable Pack", url: `${SITE}/#packs` },
-        { "@type": "ListItem", position: 7, name: "Monarch Butterfly Wildlife Printable Pack", url: `${SITE}/#packs` },
-        { "@type": "ListItem", position: 8, name: "Bottlenose Dolphin Wildlife Printable Pack", url: `${SITE}/#packs` },
-      ],
+      description: "Free downloadable wildlife printable packs for kids.",
+      numberOfItems: animals.length,
+      itemListElement: animals.map((a, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: `${a.name} Wildlife Printable Pack`,
+        url: `${SITE}/animals/${a.slug}`,
+      })),
     },
   ],
 };
