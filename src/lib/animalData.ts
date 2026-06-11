@@ -184,6 +184,7 @@ export const animals: AnimalData[] = [
       },
     ],
     activities: 31,
+    pdfFile: "/downloads/ZooExplorers_Crocodile.pdf",
     relatedSlugs: ["great-white-shark", "gorilla", "monarch-butterfly"],
   },
   {
@@ -231,6 +232,7 @@ export const animals: AnimalData[] = [
       },
     ],
     activities: 29,
+    pdfFile: "/downloads/ZooExplorers_Great_White_Shark.pdf",
     relatedSlugs: ["crocodile", "bottlenose-dolphin", "polar-bear"],
   },
   {
@@ -278,6 +280,7 @@ export const animals: AnimalData[] = [
       },
     ],
     activities: 26,
+    pdfFile: "/downloads/ZooExplorers_Monarch_Butterfly.pdf",
     relatedSlugs: ["bald-eagle", "crocodile", "gorilla"],
   },
   {
@@ -325,6 +328,7 @@ export const animals: AnimalData[] = [
       },
     ],
     activities: 33,
+    pdfFile: "/downloads/ZooExplorers_Polar_Bear.pdf",
     relatedSlugs: ["great-white-shark", "gorilla", "cheetah"],
   },
   {
@@ -419,6 +423,7 @@ export const animals: AnimalData[] = [
       },
     ],
     activities: 30,
+    pdfFile: "/downloads/ZooExplorers_Bottlenose_Dolphin.pdf",
     relatedSlugs: ["great-white-shark", "polar-bear", "bald-eagle"],
   },
   {
@@ -466,6 +471,7 @@ export const animals: AnimalData[] = [
       },
     ],
     activities: 32,
+    pdfFile: "/downloads/ZooExplorers_White_Rhino.pdf",
     relatedSlugs: ["gorilla", "cheetah", "bottlenose-dolphin"],
   },
 ];
