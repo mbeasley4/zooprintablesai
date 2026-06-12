@@ -19,12 +19,22 @@ export default defineConfig({
   },
   plugins: [
     structureTool({
-      // Show only Blog Posts in the desk so editors aren't shown the
-      // internal blockContent object type as a top-level document list.
+      // Curated desk: Homepage Settings is a pinned singleton; Blog Posts is a
+      // normal document list. The internal blockContent object type is never
+      // shown as a top-level document list.
       structure: (S) =>
         S.list()
           .title("Content")
           .items([
+            S.listItem()
+              .title("Homepage Settings")
+              .id("homepageSettings")
+              .child(
+                S.document()
+                  .schemaType("homepageSettings")
+                  .documentId("homepageSettings"),
+              ),
+            S.divider(),
             S.listItem()
               .title("Blog Posts")
               .child(S.documentTypeList("blog").title("Blog Posts")),

@@ -3,15 +3,25 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import WhatIsIncluded from "@/components/WhatIsIncluded";
 import ImpactStats from "@/components/ImpactStats";
+import VideoSection from "@/components/VideoSection";
 import Testimonials from "@/components/Testimonials";
 import PastPrintables from "@/components/PastPrintables";
 import Footer from "@/components/Footer";
 import { allFaqs } from "@/lib/faqData";
 import { animals } from "@/lib/animalData";
+import {
+  getHomepageSettings,
+  type HomepageSettings,
+} from "@/lib/homepageQueries";
 
 const SITE = "https://www.zooprintablesai.com";
 
-const jsonLd = {
+/**
+ * Builds the homepage JSON-LD `@graph`. Takes the CMS-driven homepage settings
+ * so the VideoObject node always reflects the published video.
+ */
+function buildJsonLd(settings: HomepageSettings) {
+  return {
   "@context": "https://schema.org",
   "@graph": [
     /* ── Organization ── */
@@ -172,6 +182,20 @@ const jsonLd = {
       license: "https://creativecommons.org/licenses/by-nc/4.0/",
     },
 
+    /* ── VideoObject: homepage "Watch How It Works" video ── */
+    {
+      "@type": "VideoObject",
+      "@id": `${SITE}/#homepage-video`,
+      name: settings.videoTitle,
+      description:
+        settings.videoSubtitle ??
+        "Watch how families use Zoo Printables AI's free wildlife printables — from download to print to learning.",
+      thumbnailUrl: `https://i.ytimg.com/vi/${settings.videoId}/maxresdefault.jpg`,
+      uploadDate: settings.videoPublishedAt,
+      embedUrl: `https://www.youtube-nocookie.com/embed/${settings.videoId}`,
+      publisher: { "@id": `${SITE}/#organization` },
+    },
+
     /* ── ItemList: animal archive ── */
     {
       "@type": "ItemList",
@@ -186,9 +210,13 @@ const jsonLd = {
       })),
     },
   ],
-};
+  };
+}
 
-export default function Home() {
+export default async function Home() {
+  const settings = await getHomepageSettings();
+  const jsonLd = buildJsonLd(settings);
+
   return (
     <>
       <script
@@ -206,6 +234,11 @@ export default function Home() {
         </p>
         <WhatIsIncluded />
         <ImpactStats />
+        <VideoSection
+          videoId={settings.videoId}
+          videoTitle={settings.videoTitle}
+          videoSubtitle={settings.videoSubtitle}
+        />
 
         {/* Elephant photo banner */}
         <section className="relative h-100 sm:h-120 overflow-hidden">
