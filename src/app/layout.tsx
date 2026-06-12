@@ -73,6 +73,9 @@ export const metadata: Metadata = {
   category: "education",
   verification: {
     google: "ee8b0d9224d9e0bd",
+    other: {
+      "facebook-domain-verification": "l7mm6ecbkcmu1g6wc2rmvr5qubxkjn",
+    },
   },
 };
 
