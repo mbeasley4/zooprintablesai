@@ -66,6 +66,37 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+function blockText(block: { children?: Array<{ text?: string }> }): string {
+  if (!Array.isArray(block.children)) return "";
+  return block.children.map((c) => c.text ?? "").join("");
+}
+
+function extractFaqItems(content: Array<{ style?: string; children?: Array<{ text?: string }> }>) {
+  const faqStart = content.findIndex(
+    (b) => b.style === "h2" && /faq|frequently asked/i.test(blockText(b)),
+  );
+  if (faqStart === -1) return [];
+
+  const items: Array<{ question: string; answer: string }> = [];
+  let i = faqStart + 1;
+
+  while (i < content.length) {
+    const block = content[i];
+    if (block.style === "h2") break;
+    if (block.style === "h3") {
+      const next = content[i + 1];
+      if (next?.style === "normal") {
+        items.push({ question: blockText(block), answer: blockText(next) });
+        i += 2;
+        continue;
+      }
+    }
+    i++;
+  }
+
+  return items;
+}
+
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
   const post = await getBlogPost(slug);
@@ -78,6 +109,8 @@ export default async function BlogPostPage({ params }: Props) {
   const jsonLdImage = post.featureImage?.asset
     ? urlFor(post.featureImage).width(1200).height(630).fit("crop").url()
     : `${SITE}/og-image.png`;
+
+  const faqItems = extractFaqItems(post.content as Array<{ style?: string; children?: Array<{ text?: string }> }>);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -110,6 +143,19 @@ export default async function BlogPostPage({ params }: Props) {
         inLanguage: "en-US",
         isPartOf: { "@id": `${SITE}/#website` },
       },
+      ...(faqItems.length > 0
+        ? [
+            {
+              "@type": "FAQPage",
+              "@id": `${SITE}/blog/${slug}#faqpage`,
+              mainEntity: faqItems.map(({ question, answer }) => ({
+                "@type": "Question",
+                name: question,
+                acceptedAnswer: { "@type": "Answer", text: answer },
+              })),
+            },
+          ]
+        : []),
     ],
   };
 
