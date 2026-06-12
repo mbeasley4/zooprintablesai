@@ -6,10 +6,11 @@ import Logo from "./Logo";
 const navLinks = [
   { label: "How It Works", href: "/#how-it-works" },
   { label: "Animals A–Z",  href: "/animals" },
+  { label: "For Schools",  href: "/schools", highlight: true },
   { label: "Blog",         href: "/blog" },
   { label: "Charities",    href: "/charities" },
   { label: "FAQ",          href: "/faq" },
-  { label: "About the Founder", href: "/about" },
+  { label: "About",        href: "/about" },
 ];
 
 export default function Navbar() {
@@ -42,18 +43,28 @@ export default function Navbar() {
           </a>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-7" aria-label="Main navigation">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className={`text-sm font-semibold transition-colors hover:text-[#F4A261] ${
-                  onDark ? "text-white" : "text-gray-700"
-                }`}
-              >
-                {link.label}
-              </a>
-            ))}
+          <nav className="hidden md:flex items-center gap-5" aria-label="Main navigation">
+            {navLinks.map((link) =>
+              link.highlight ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm font-bold text-[#2D6A4F] border border-[#2D6A4F] px-3 py-1 rounded-full hover:bg-[#2D6A4F] hover:text-white transition-colors"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className={`text-sm font-semibold transition-colors hover:text-[#F4A261] ${
+                    onDark ? "text-white" : "text-gray-700"
+                  }`}
+                >
+                  {link.label}
+                </a>
+              )
+            )}
           </nav>
 
           <a

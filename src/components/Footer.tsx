@@ -15,6 +15,7 @@ const footerLinks: Record<string, FooterLink[]> = {
   Resources: [
     { label: "Animal Archive", href: "/animals" },
     { label: "Free Sample Pack", href: "/#packs" },
+    { label: "For Schools", href: "/schools" },
     { label: "Conservation Partners", href: "/charities" },
     { label: "FAQ", href: "/faq" },
   ],
