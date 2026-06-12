@@ -16,6 +16,18 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Environment Variables
+
+Configure these in `.env.local` (and in your Vercel project settings for production):
+
+| Variable | Description |
+| --- | --- |
+| `NEXT_PUBLIC_SANITY_PROJECT_ID` | Sanity project ID (public). |
+| `NEXT_PUBLIC_SANITY_DATASET` | Sanity dataset name (public). |
+| `SANITY_API_WRITE_TOKEN` | Sanity write token. Server-side only — never expose to the client. |
+| `BREVO_API_KEY` | Brevo (Sendinblue) API key for the newsletter signup. Server-side only — never expose to the client. |
+| `BREVO_LIST_ID` | Numeric ID of the Brevo contact list newsletter subscribers are added to. |
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
