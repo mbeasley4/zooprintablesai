@@ -41,7 +41,7 @@ const aboutJsonLd = {
         "Mike Beasley is a full-stack web developer from Cincinnati, Ohio, and the founder of Zoo Printables AI. He builds high-performance web platforms and AI-integrated content systems, and created Zoo Printables AI to provide completely free wildlife education resources for kids.",
       image: `${SITE}/images/mike-profile.png`,
       url: `${SITE}/about`,
-      worksFor: { "@type": "Organization", name: "Zoo Printables AI", url: SITE },
+      worksFor: { "@id": `${SITE}/#organization` },
       alumniOf: [
         { "@type": "CollegeOrUniversity", name: "Northern Kentucky University", sameAs: "https://www.nku.edu" },
       ],
@@ -66,7 +66,7 @@ const aboutJsonLd = {
       name: "Meet Mike Beasley — Founder of Zoo Printables AI",
       description:
         "Learn about Mike Beasley, full-stack web developer and founder of Zoo Printables AI — a free library of AI-crafted wildlife printables for kids ages 3–12.",
-      isPartOf: { "@type": "WebSite", url: SITE },
+      isPartOf: { "@id": `${SITE}/#website` },
       about: { "@id": `${SITE}/#mike-beasley` },
       speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", ".bio-speakable"] },
     },

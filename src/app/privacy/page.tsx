@@ -11,6 +11,31 @@ export const metadata: Metadata = {
   alternates: { canonical: `${SITE}/privacy` },
 };
 
+const privacyJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE },
+        { "@type": "ListItem", position: 2, name: "Privacy Policy", item: `${SITE}/privacy` },
+      ],
+    },
+    {
+      "@type": "WebPage",
+      "@id": `${SITE}/privacy#webpage`,
+      url: `${SITE}/privacy`,
+      name: "Privacy Policy | Zoo Printables AI",
+      description:
+        "Zoo Printables AI does not collect, store, or share any personal information. Learn about our privacy practices and COPPA compliance.",
+      isPartOf: { "@id": `${SITE}/#website` },
+      datePublished: "2026-06-11",
+      dateModified: "2026-06-11",
+      inLanguage: "en-US",
+    },
+  ],
+};
+
 const sections = [
   {
     number: "1",
@@ -53,6 +78,10 @@ const sections = [
 export default function PrivacyPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(privacyJsonLd) }}
+      />
       <Navbar />
       <main className="bg-[#FEFAE0] pt-24 min-h-screen">
 

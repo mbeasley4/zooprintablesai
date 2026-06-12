@@ -58,7 +58,7 @@ const jsonLd = {
       "@id": `${SITE}/#website`,
       url: SITE,
       name: "Zoo Printables AI",
-      description: "Free wildlife printables for kids ages 3–12 — powered by AI, curated by a conservation biologist.",
+      description: "Free wildlife printables for kids ages 3–12 — powered by AI, built by full-stack developer Mike Beasley.",
       publisher: { "@id": `${SITE}/#organization` },
       inLanguage: "en-US",
       potentialAction: {

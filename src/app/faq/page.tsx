@@ -39,7 +39,7 @@ const jsonLd = {
     },
     {
       "@type": "FAQPage",
-      "@id": `${SITE}/faq`,
+      "@id": `${SITE}/faq#faqpage`,
       url: `${SITE}/faq`,
       name: "Zoo Printables AI — Frequently Asked Questions",
       mainEntity: allFaqs.map(({ q, a }) => ({

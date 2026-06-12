@@ -20,6 +20,31 @@ export const metadata: Metadata = {
   },
 };
 
+const blogIndexJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE },
+        { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE}/blog` },
+      ],
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": `${SITE}/blog#webpage`,
+      name: "Blog — Zoo Printables AI",
+      description:
+        "Wildlife education tips, printable activity ideas, and conservation stories for parents, teachers, and homeschoolers from Zoo Printables AI.",
+      url: `${SITE}/blog`,
+      isPartOf: { "@id": `${SITE}/#website` },
+      author: { "@id": `${SITE}/#mike-beasley` },
+      publisher: { "@id": `${SITE}/#organization` },
+      inLanguage: "en-US",
+    },
+  ],
+};
+
 const FALLBACK_IMAGES = [
   "/images/site/gorilla-1.png",
   "/images/site/elephant.png",
@@ -50,6 +75,10 @@ export default async function BlogIndexPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogIndexJsonLd) }}
+      />
       <Navbar />
       <main>
         {/* Hero */}

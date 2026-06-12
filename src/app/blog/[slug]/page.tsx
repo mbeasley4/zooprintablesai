@@ -81,17 +81,36 @@ export default async function BlogPostPage({ params }: Props) {
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "@id": `${SITE}/blog/${slug}#blogposting`,
-    headline: post.title,
-    description: post.metaDescription ?? post.excerpt,
-    image: jsonLdImage,
-    datePublished: post.createDate,
-    url: `${SITE}/blog/${slug}`,
-    mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE}/blog/${slug}` },
-    author: { "@id": `${SITE}/#mike-beasley` },
-    publisher: { "@id": `${SITE}/#organization` },
-    inLanguage: "en-US",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: SITE },
+          { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE}/blog` },
+          { "@type": "ListItem", position: 3, name: post.title, item: `${SITE}/blog/${slug}` },
+        ],
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": `${SITE}/blog/${slug}#blogposting`,
+        headline: post.title,
+        description: post.metaDescription ?? post.excerpt,
+        image: {
+          "@type": "ImageObject",
+          url: jsonLdImage,
+          width: 1200,
+          height: 630,
+        },
+        datePublished: post.createDate,
+        dateModified: post.createDate,
+        url: `${SITE}/blog/${slug}`,
+        mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE}/blog/${slug}#webpage` },
+        author: { "@id": `${SITE}/#mike-beasley` },
+        publisher: { "@id": `${SITE}/#organization` },
+        inLanguage: "en-US",
+        isPartOf: { "@id": `${SITE}/#website` },
+      },
+    ],
   };
 
   return (

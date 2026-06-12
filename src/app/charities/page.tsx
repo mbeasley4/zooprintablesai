@@ -143,7 +143,7 @@ const jsonLd = {
     },
     {
       "@type": "WebPage",
-      "@id": `${SITE}/charities`,
+      "@id": `${SITE}/charities#webpage`,
       name: "Wildlife Charities We Recommend",
       description: "Zoo Printables AI recommends these top-rated wildlife conservation organizations.",
       url: `${SITE}/charities`,

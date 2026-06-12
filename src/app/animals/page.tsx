@@ -32,10 +32,11 @@ const jsonLd = {
     },
     {
       "@type": "CollectionPage",
-      "@id": `${SITE}/animals`,
+      "@id": `${SITE}/animals#webpage`,
       name: "Free Animal Printable Packs A–Z",
       description: "Browse all free wildlife printable packs for kids ages 3–12 from Zoo Printables AI.",
       url: `${SITE}/animals`,
+      isPartOf: { "@id": `${SITE}/#website` },
       author: { "@id": `${SITE}/#mike-beasley` },
     },
     {

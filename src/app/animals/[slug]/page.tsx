@@ -57,7 +57,7 @@ export default async function AnimalPage({ params }: Props) {
         name: `${animal.name} Wildlife Printable Pack`,
         description: `Free downloadable ${animal.name.toLowerCase()} educational pack for children ages 3–12. Includes animal fact sheets, coloring pages, and ${animal.activities} activities. Facts verified against IUCN Red List data.`,
         url: `${SITE}/animals/${animal.slug}`,
-        provider: { "@id": `${SITE}/#organization` },
+        publisher: { "@id": `${SITE}/#organization` },
         author: { "@id": `${SITE}/#mike-beasley` },
         educationalLevel: ["Preschool", "Elementary School", "Middle School"],
         learningResourceType: ["Activity", "Worksheet", "Coloring Page", "Fact Sheet"],
