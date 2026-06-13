@@ -6,16 +6,16 @@ type FooterLink = { label: string; href: string; external?: boolean };
 
 const footerLinks: Record<string, FooterLink[]> = {
   "Free Packs": [
-    { label: "Cub Pack (Ages 3–5)", href: "/#packs" },
-    { label: "Explorer Pack (Ages 6–9)", href: "/#packs" },
-    { label: "Conservationist Pack (Ages 10–12)", href: "/#packs" },
+    { label: "Cub Pack (Ages 3–5)", href: "/#archive" },
+    { label: "Explorer Pack (Ages 6–9)", href: "/#archive" },
+    { label: "Conservationist Pack (Ages 10–12)", href: "/#archive" },
     { label: "Animal Archive", href: "/animals" },
-    { label: "All Packs", href: "/#packs" },
+    { label: "All Packs", href: "/#archive" },
   ],
   Resources: [
     { label: "Animal Archive", href: "/animals" },
-    { label: "Free Sample Pack", href: "/#packs" },
-    { label: "For Schools", href: "/schools" },
+    { label: "Free Sample Pack", href: "/#archive" },
+    { label: "For Teachers", href: "/schools" },
     { label: "Conservation Partners", href: "/charities" },
     { label: "FAQ", href: "/faq" },
   ],
